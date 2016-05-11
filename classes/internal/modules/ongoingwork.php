@@ -14,7 +14,7 @@ error_reporting(0);
 				$worksInArray= $db->loadObjectList();
 				
 				include_once(IPATH_ROOT."/classes/external/priyaTools/resizer.php");
-				$Imageparams = array('width' =>430);	
+				$Imageparams = array('width' =>283);	
 				 foreach($worksInArray as $work)
 				 {
 				 	if($work->data!=="" || $work->data!==NULL)
