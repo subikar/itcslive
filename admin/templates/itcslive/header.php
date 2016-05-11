@@ -1,4 +1,4 @@
-<?php global $Config; ?>
+<?php global $Config,$template; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@
 	<script src="<?php echo $Config->site; ?>templates/itcslive/js/colorbox/jquery.colorbox.js"></script>
 	 <script src="<?php echo $Config->site; ?>templates/itcslive/js/auto_jqueryui/kendo.all.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<?php echo $this->Js; ?>
+	<?php echo $template->HeadJs(); ?>
 <style type="text/css">
 .topNegative1000 {
   top: -1000px !important;
