@@ -9,7 +9,7 @@
     text-transform: capitalize;
 }
 .attach_file { color: #000;background-color: #ccc;padding-left: 3px; }
-.comment { margin:8px 0px; border-bottom:1px solid #4eb6f3;}
+.comment { margin:8px 0px; border-bottom:1px solid #E83E01;}
 .tb-comment-text { margin-left:44px;color:#000;}
 .tb-comment-meta-info { margin-left:44px; font-size:11px; color:#acadad;}
 #attachfile { /*width:100%; float:left;*/ background:#aeaeae;}
@@ -245,6 +245,9 @@ a [class^="icon-"], a [class*=" icon-"] {
     text-shadow: none;
 }
 
+#contentbox{height: 500px;overflow: scroll;}
+
+.widget_pages{border:solid 1px #E83E01;}
 
 .cb .object-description {
     padding-right: 40px;
@@ -252,7 +255,7 @@ a [class^="icon-"], a [class*=" icon-"] {
 
 a.subaction-link {
     font-size: 14px;
-	color:#086c89; background:#86ccf5; padding:0 5px 0 0; margin-left:2px; display:inline-block;
+	color:#FFF; background:#E83E01; padding:0 5px 0 0; margin-left:2px; display:inline-block;
 }
 .k-picker-wrap .k-input, .k-numeric-wrap .k-input, .k-dropdown-wrap .k-input, .k-selectbox .k-input {color:#FFF !important;}
 .icon-pencil:before {
@@ -341,7 +344,7 @@ a.subaction-link {
 	text-transform:uppercase;
 }
 
-.user_avatar { background:#4eb6f3;border-radius:15px; width:30px; height:30px;background-repeat: no-repeat;
+.user_avatar { background:#E83E01;border-radius:15px; width:30px; height:30px;background-repeat: no-repeat;
     border-radius: 130px;
     box-sizing: content-box;
     cursor: pointer;
@@ -356,7 +359,7 @@ a.subaction-link {
     margin: 0 0 10px; color:#999999; font-size:11px;
 }
 .comment_list { padding:0; margin:0;}
-.comment_btn {background-color: #4eb6f3;
+.comment_btn {background-color: #E83E01;
     background-image: none;
     /*border-color: #bbb;*/
     /*box-shadow: 0 0 0 transparent;*/
@@ -377,7 +380,7 @@ a.subaction-link {
 .assign{ line-height: 34px; float:right; font-size:12px;/*background:#0984b7;float: right;background-color: #4EB6F3;width: 100%;*/color: #ff5818;/*text-align: right;*/}.assign a { color:#0984b7; font-size:17px;}
 .completetaskdiv, .completetaskdiv i{/*height: 26px;line-height: 26px;*/background-color: #D04D0C;}.completetaskdiv i{color:#fff;font-size: 30px;}
 completetaskdiv a {padding-bottom:10px;}
-.completetaskdiv{background-color:#ff5818;color:#FFF; font-size:13px; width:252px;float:left; margin-right:6px;  /*height:48px;*/ margin-bottom:10px; }
+.completetaskdiv{background-color:#E83E01;color:#FFF; font-size:13px; width:252px;float:left; margin-right:6px;  /*height:48px;*/ margin-bottom:10px; }
 .completetaskdiv .k-i-arrow-s, .attendencediv .k-i-arrow-s{width:80%; height: 21px;line-height: 21px; border:0px;}
 .completetaskdiv .k-select{right:0px;}
 .completetaskdiv .calfont{font-size:19px;/* padding:3px;*/}
@@ -385,10 +388,10 @@ completetaskdiv a {padding-bottom:10px;}
 
 
 /*modified css 20/10/2014*/
-.article-body h5.title_1 {background:linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); margin:0 0 3px 0px; padding:8px 0 8px 5px; border-bottom:1px solid #bababa; color:#ff5818; font-size:17px; text-transform:uppercase;}
+.article-body h5.title_1 {background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 0.34) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); margin:0 0 3px 0px; padding:8px 0 8px 5px; border-bottom:1px solid #bababa; color:#ff5818; font-size:17px; text-transform:uppercase;}
 .color1 {background:#FFF;}
 .defaultBoxLine ul li span a {padding:0; text-transform:uppercase;}
-.menu-our-services-container {/*--background: rgba(255,255,255,1);background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(213,213,213,1)));background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5d5d5', GradientType=0 )--*/; border:1px solid #b0b0b0b;margin:5px 4px; border-radius:5px;background: #e83e01;}
+.menu-our-services-container {/*--background: rgba(255,255,255,1);background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(213,213,213,1)));background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5d5d5', GradientType=0 ); border:1px solid #b0b0b0b;margin:5px 4px; border-radius:5px;--*/background: #e83e01;}
 .completetaskdiv input[type=select] {height:20px !important}
 .object-description-data {margin-top:30px;}
 a.attachment {color:#fff}
@@ -409,9 +412,9 @@ a.attachment {color:#fff}
 .fa-check::before {color:#fff;content: "\f00c";}
 .fa-pencil::before {color:#0984B7;content: "\f040"; font-size: 13px;  margin-left: 10px;  vertical-align: top;}
 
-.boiteContent .task_ongoing { background:linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); border-top:1px solid #f2f2f2;text-transform:uppercase; font-size:18px !important; color:#e43d00 !important; margin:0px; line-height:33px; padding:0 0 0 8px;}
+.boiteContent .task_ongoing { background:#E83E01;/*--background:linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); --*/border-top:1px solid #E83E01;text-transform:uppercase; font-size:18px !important; color:#FFF !important; margin:0px; line-height:33px; padding:0 0 0 8px;}
 li.bulet2 {background:url(../images/bulet2.png) left 4px no-repeat; list-style-type:none !important; font-size:13px; margin-bottom:20px;}
-ul.no_margin {margin-left:0 !important; padding-left:0 !important}
+ul.no_margin {margin-left:0 !important; padding-left:0 !important;background: #E83E01; */}
 h5.bulet1 {background:url(../images/bulet2.png) left center no-repeat; padding:0 0 0 10px;} 
 .box_1 {background:#fff;} 
 .fa-smile-o_1:before{ content: "\f118"; line-height:31px; font-size:21px; padding:5px;}
@@ -431,10 +434,10 @@ h5.bulet1 {background:url(../images/bulet2.png) left center no-repeat; padding:0
 .row5{width:63%; float:right;}
 .row6{width:36%;}
 #content{padding:10px 0 0 0 !important;}
-.fa-ellipsis-v:before {content:"\f142"; color:#fff;}
+.fa-ellipsis-v:before {content:"\f142"; color:#000;}
 
 /*modified on 27/10/2014*/
-.boiteContent ul li {background:none repeat scroll 0 0 #E86010; list-style-type:none; padding:5px 0 5px 10px; margin:1px 0 0;}
+.boiteContent ul li {background:none repeat scroll 0 0 #FFF; list-style-type:none; padding:5px 0 5px 10px; margin:1px 0 0;}
 .boiteContent span {color:#014886;}
 .fa {line-height:normal;}
 .fa-trash-o:before {font-size:18px;}
@@ -454,20 +457,20 @@ select {background:#fff;}
 
 
 .defaultBoxLine a.tip {
-  color:#FFF;
+  color:#000;
   font-weight:bold;
   text-decoration: none;
 }
 
 .defaultBoxLine a.tip:hover {
-  color:#FFF;
+  color:#E83E01;
   position: relative;
 }
 
 .defaultBoxLine a.tip:hover:after {
   content: attr(tooltip);
   padding: 17px 10px 10px 10px;
-  color: #086C89;
+  color: #000;
   position: absolute;
   left: 0;
   margin-left:20px;

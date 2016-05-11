@@ -7,6 +7,7 @@
    include_once('includes/request.php');
    include_once('includes/mainframe.php');
    include_once('includes/mail.php');
+   include_once('external/jsmin/jsmin.php');
    global $db,$my,$mainframe,$params;
    $db = new iFactory;
    $mainframe = new MainFrame();
@@ -59,7 +60,22 @@
     {
 	  global $Config,$db,$template,$ScriptUri,$my;
 	  $server = IRequest::get('SERVER');
-	  $ScriptUri = $server['SCRIPT_URI'];
+	  if(isset($server['SCRIPT_URI'])){
+	   $ScriptUri = $server['SCRIPT_URI'];
+	   }
+	  else
+	   { 
+	      $ScriptUri = $server['REQUEST_URI'];
+		  $ScriptUri = explode('/',$ScriptUri);
+		  $ScriptUri = $ScriptUri[(count($ScriptUri) -1)];
+		  $ScriptUri = $Config->site.$ScriptUri;
+		  if(strpos($ScriptUri, "?"))
+		    $ScriptUri = substr($ScriptUri, 0, strpos($ScriptUri, "?"));
+		 
+	   } 
+	   //print_r($ScriptUri); exit;
+	 // $ScriptUri = (isset($server['SCRIPT_URI']))?$server['SCRIPT_URI']:$server['REQUEST_URI'];
+	 /// print_r($server); exit;
 	  $template->assignRef('SCRIPT_URI',$ScriptUri); 				  
 	  $view = IRequest::getVar('view','');
 	  SetSession();
@@ -71,6 +87,7 @@
 			     $ScriptUri = rtrim($ScriptUri, "/");
 			  }			  
 			  $ScriptUri = ($ScriptUri == '' || $ScriptUri == 'index.php')?'home':$ScriptUri;
+			 // print($ScriptUri); exit;
 			/*  if($ScriptUri == 'home')
 			    {
 				  $template->TemplatePath = '/home/pritam/public_html/custom/itcslive/templates/itcslivenew/';

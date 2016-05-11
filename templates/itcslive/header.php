@@ -1,5 +1,17 @@
 <?php defined ('ITCS') or die ("Go away.");
 global $Config,$my,$template;
+/*$template->includejs($this->site."templates/itcslive/js/templatejs/jquery-migrate-1.1.1.js",1,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/script.js",2,1);
+$template->includejs($this->site."templates/itcslive/js/templatejs/superfish.js",3,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/jquery.ui.totop.js",4,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/jquery.equalheights.js",5,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/jquery.mobilemenu.js",6,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/jquery.easing.1.3.js",7,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/jquery.mobile.customized.min.js",8,0);
+$template->includejs($this->site."templates/itcslive/js/colorbox/jquery.colorbox.js",9,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/kendo.all.min.js",10,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.js",11,0);*/
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,30 +30,34 @@ global $Config,$my,$template;
  <meta property="og:description"  content="<?php echo isset($this->Description)?$this->Description:''; ?>" />
  <meta property="og:site_name" content="iTCSLive" />
  <meta property="fb:admins" content="722407295"/>
-<meta name="Description" content="<?php echo isset($this->Description)?$this->Description:''; ?>">
-<meta name="Keywords" content="<?php echo isset($this->Keyword)?$this->Keyword:''; ?>"> 
-     <link rel="icon" href="images/favicon.ico">
-     <link rel="shortcut icon" href="<?php echo $this->site; ?>templates/itcslive/images/favicon.ico" />
-     <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/style.css">
-	 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/light-blue.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  
-  <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery-migrate-1.1.1.js"></script>
-   <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/script.js"></script> 
-	 <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/superfish.js"></script>
-	 <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.ui.totop.js"></script>
-	 <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.equalheights.js"></script>
-	 <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.mobilemenu.js"></script>
-	 <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.easing.1.3.js"></script>
-	<script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.mobile.customized.min.js"></script>
-  
-  <script src="<?php echo $this->site; ?>templates/itcslive/js/colorbox/jquery.colorbox.js"></script>
-  <script src="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.all.min.js"></script>
-   <script src="<?php echo $this->site; ?>classes/external/editor/tinymce.min.js"></script>
-  
+ <meta name="Description" content="<?php echo isset($this->Description)?$this->Description:''; ?>">
+ <meta name="Keywords" content="<?php echo isset($this->Keyword)?$this->Keyword:''; ?>"> 
+ <link rel="icon" href="images/favicon.ico">
+ <link rel="shortcut icon" href="<?php echo $this->site; ?>templates/itcslive/images/favicon.ico" />
+ <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/style.css">
+ <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/light-blue.css">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel=stylesheet type="text/css" media=all href="<?php echo $this->site; ?>templates/itcslive/js/colorbox/colorbox.css"/>
+<link rel=stylesheet type="text/css" media=all href="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.common.min.css"/>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524982e11e01596a" async="async"></script>
+<?php echo $template->css; ?>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery-migrate-1.1.1.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/script.js"></script> 
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/superfish.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.ui.totop.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.equalheights.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.mobilemenu.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.easing.1.3.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.mobile.customized.min.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/colorbox/jquery.colorbox.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.all.min.js"></script>
+ <script src="<?php echo $this->site; ?>classes/external/editor/tinymce.min.js"></script>
+<?php echo $template->HeadJs(); ?>
      <script>
-      $(document).ready(function(){
-	     var screenwidth = $(document).width();
+      jQuery(document).ready(function(){
+	     var screenwidth = jQuery(document).width();
 		 if(screenwidth <= 320)
  		 jQuery(".clientlogin").colorbox({iframe:true, width:"97%", height:"60%"});	 
 		 else
@@ -49,13 +65,6 @@ global $Config,$my,$template;
       }); 
 	  
      </script>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel=stylesheet type="text/css" media=all href="<?php echo $this->site; ?>templates/itcslive/js/colorbox/colorbox.css"/>
-<link rel=stylesheet type="text/css" media=all href="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.common.min.css"/>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524982e11e01596a" async="async"></script>
-<?php echo $template->css; ?>
-<?php echo $template->HeadJs(); ?>
 </head>
 <body id="page-1">
 <div class="main">

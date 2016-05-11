@@ -12,13 +12,15 @@ defined ('ITCS') or die ("Go away.");
 		      global $Config;
 		      $this->TemplatePath = $Config->templatepath;
 		   }
-		 function includejs($jspath,$priority = '')
+		 function includejs($jspath,$priority = '',$minify=0)
 		   {
 		      $this->priority = ($priority != '' && $this->priority < $priority)?$priority:$this->priority; 
 		      $this->Js[] = array(
-			                      'text'=>'<script src="'.$jspath.'"></script>',
+			                      'text'=>'<script src="'.$jspath.'"></script>
+								  ',
 					              'priority'=>$priority,
 								  'url'=>$jspath,
+								  'minify'=>$minify
 					             );
 								 
 			 	
@@ -30,6 +32,7 @@ defined ('ITCS') or die ("Go away.");
 		   } 
 		 function HeadJs ()
 		   {
+		      global $Config;
 		      //print($this->priority); exit;
 		     foreach($this->Js as $key => $js)
 			   {
@@ -39,16 +42,37 @@ defined ('ITCS') or die ("Go away.");
 				     $this->Js[$key]['priority'] = $this->priority; 
 				   } 	 
 			   }
-
-			 $NewJs = $this->sksort($this->Js,'priority',SORT_DESC);
-			 //print_r($NewJs); exit;
-			 $content = '';
-		     foreach($NewJs as $js)
-			   {
-			     //$content .= file_get_contents($js['url']); 
-			     echo $js['text'];
-			   }
-			 //print_r($content); exit;  
+			 $NewJs = $this->sksort($this->Js,'priority',SORT_DESC);  
+             if($Config->EnableJsCompression == true)
+			   {  
+					 
+					 $CacheJSFile = 'cache/js'.DS.md5(json_encode($NewJs)).'.js';
+					 if(!is_dir(IPATH_ROOT.DS.'cache/js'))
+					   mkdir(IPATH_ROOT.DS.'cache/js');
+					   
+					 if(!file_exists(IPATH_ROOT.DS.$CacheJSFile))
+					   {
+							 $content = '';
+							 $fp = fopen(IPATH_ROOT.DS.$CacheJSFile, 'w') or die("Unable to open file!");
+							 foreach($NewJs as $js)
+							   {
+								    $handle = fopen(IPATH_ROOT.DS.$js['url'],'r'); 
+									$content = fread($handle, filesize(IPATH_ROOT.DS.$js['url']));
+									fclose($handle);
+									fwrite($fp, PHP_EOL);
+									fwrite($fp, $content);
+							   }
+							  fclose($fp);	 
+							 //print(IPATH_ROOT.DS.$CacheJSFile);   
+							 //fwrite(IPATH_ROOT.DS.$CacheJSFile, $content,'W');  
+						 }	
+						echo '<script src="'.$Config->site.$CacheJSFile.'"></script>';	    
+				}
+			else
+			  {
+							 foreach($NewJs as $js)
+								echo $js['text'];
+			  }			
 		   }
 
 			function sksort($array, $subkey="id", $sort_ascending=false) {
@@ -89,6 +113,34 @@ defined ('ITCS') or die ("Go away.");
 				}
 		      return false;		      
            }
+		 function CheckCache()
+		   {
+		     $server = IRequest::get('SERVER');
+			 $ScriptUri = $server['REQUEST_URI'];
+			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
+			 if(!is_dir(IPATH_ROOT.DS.'cache/html'))
+			   mkdir(IPATH_ROOT.DS.'cache/html');
+			 
+             if(file_exists($filename))
+			   {
+					$handle = fopen($filename,'r'); 
+					$content = fread($handle, filesize($filename));
+					fclose($handle);
+					return $content;			     
+			   }
+			 else    
+		       return 'no';
+		   }  
+		 function SetCache($content)
+		   {
+		     $server = IRequest::get('SERVER');
+			 $ScriptUri = $server['REQUEST_URI'];
+			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
+			// print($filename); exit;
+			 $fp = fopen($filename, 'w') or die("Unable to open file!");
+			 fwrite($fp, $content);
+			 fclose($fp);
+		   }  
 		 function display($file)
 		   {
 		       global $my;   

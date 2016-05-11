@@ -1,7 +1,10 @@
 <?php 
+    if(!defined('IPATH_BASE'))
     define('IPATH_BASE',__DIR__);
+	if(!defined('DIRECTORY_SEPARATOR'))
     define('DIRECTORY_SEPARATOR','/');
-    define('DS','/');
+    if(!defined('DS'))
+	  define('DS','/');
 	// Global definitions
 	$parts = explode(DIRECTORY_SEPARATOR, IPATH_BASE);
 	array_pop($parts);
