@@ -1,4 +1,6 @@
 <?php 
+    //ini_set('display_error',0); 
+	error_reporting(0); 
     if(!defined('IPATH_BASE'))
     define('IPATH_BASE',__DIR__);
 	if(!defined('DIRECTORY_SEPARATOR'))
@@ -11,5 +13,10 @@
 	// Defines
 	define('IPATH_ROOT', implode(DIRECTORY_SEPARATOR, $parts));
   include_once('common.php');
-  Get404Original();
+  global $template;
+  $content = $cache = $template->CheckCache();
+  if($cache == 'no')
+    { 
+      Get404Original();
+	} 
 ?>

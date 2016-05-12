@@ -8,6 +8,8 @@ defined ('ITCS') or die ("Go away.");
 		 var $MinifyJS = array();
 		 var $priority = 0;
 		 var $csspriority = 0;
+		 var $cache = 0;
+		 var $compress = 0;
 		 function __construct()
 		   {
 		      global $Config;
@@ -127,26 +129,57 @@ defined ('ITCS') or die ("Go away.");
 					$handle = fopen($filename,'r'); 
 					$content = fread($handle, filesize($filename));
 					fclose($handle);
-					return $content;			     
+					echo $content;
+					return 'cache';			     
 			   }
 			 else    
 		       return 'no';
 		   }  
 		 function SetCache($content)
 		   {
-/*		     $server = IRequest::get('SERVER');
-			 $ScriptUri = $server['REQUEST_URI'];
-			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
-			// print($filename); exit;
-			 $fp = fopen($filename, 'w') or die("Unable to open file!");
-			 fwrite($fp, $content);
-			 fclose($fp);*/
+		     if($this->cache == 1)
+			   {
+				 $server = IRequest::get('SERVER');
+				 $ScriptUri = $server['REQUEST_URI'];
+				 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
+				 $fp = fopen($filename, 'w') or die("Unable to open file!");
+				 fwrite($fp, $content);
+				 fclose($fp);
+			   }
+			 echo $content;
 		   }  
 		 function display($file)
 		   {
-		       global $my;   
+		       global $my;  
+			   ob_start(); 
 		       include($this->TemplatePath.$file.'.php');
+			   $content = ob_get_contents();
+			   $content = $this->sanitize_output($content);
+			   ob_end_clean();
+			   $this->SetCache($content);
+			   
 		   }
+			function sanitize_output($buffer) {
+			
+			if($this->compress == 1)
+			  {
+				$search = array(
+					'/\>[^\S ]+/s',  // strip whitespaces after tags, except space
+					'/[^\S ]+\</s',  // strip whitespaces before tags, except space
+					'/(\s)+/s'       // shorten multiple whitespace sequences
+				);
+			
+				$replace = array(
+					'>',
+					'<',
+					'\\1'
+				);
+			
+				$buffer = preg_replace($search, $replace, $buffer);
+			  }
+				return $buffer;
+			}
+		   
 		  function menu($menualias)
 		   {
 		     global $db,$template;

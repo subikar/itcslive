@@ -396,4 +396,57 @@ jQuery(document).ready(function(){
 	jQuery("#text_datetime").kendoDateTimePicker({format: "yyyy-MM-dd HH:mm"});
 	jQuery("#text_category").kendoComboBox({filter: "contains"});
 	jQuery(".attachment").colorbox({iframe:true, width:"40%", height:"70%"});
+
+	     var screenwidth = $(document).width();
+		 <!--alert(screenwidth);-->
+		 if(screenwidth <= 320)
+		   {
+                   jQuery(".modifydetails").colorbox({iframe:true, width:"95%", height:"750px"});	
+                   jQuery(".addcontact").colorbox({iframe:true, width:"100%", height:"500px"});
+				   jQuery(".attendance").colorbox({iframe:true, width:"97%", height:"400px"});
+				   jQuery(".breaktime").colorbox({iframe:true, width:"97%", height:"400px"});
+				   jQuery(".change_password").colorbox({iframe:true, width:"98%", height:"300px"});	
+		   
+		   }
+		 else if(screenwidth > 320 && screenwidth <= 480)
+		   {
+                   jQuery(".modifydetails").colorbox({iframe:true, width:"95%", height:"750px"});	
+                   jQuery(".addcontact").colorbox({iframe:true, width:"100%", height:"500px"});
+				   jQuery(".attendance").colorbox({iframe:true, width:"40%", height:"550px"});
+				   jQuery(".breaktime").colorbox({iframe:true, width:"97%", height:"400px"});
+				   jQuery(".change_password").colorbox({iframe:true, width:"98%", height:"300px"});
+		   }  
+ 		 else if(screenwidth > 480 && screenwidth <= 600)
+		   {
+                   jQuery(".modifydetails").colorbox({iframe:true, width:"80%", height:"750px"});	
+                   jQuery(".addcontact").colorbox({iframe:true, width:"80%", height:"450px"});
+				   jQuery(".attendance").colorbox({iframe:true, width:"40%", height:"550px"});
+				   jQuery(".breaktime").colorbox({iframe:true, width:"97%", height:"400px"});
+				   jQuery(".change_password").colorbox({iframe:true, width:"100%", height:"300px"});
+		   }
+		 else if(screenwidth > 600 && screenwidth <= 768)
+		   {
+                   jQuery(".modifydetails").colorbox({iframe:true, width:"98%", height:"750px"});	
+                   jQuery(".addcontact").colorbox({iframe:true, width:"80%", height:"450px"});
+				   jQuery(".attendance").colorbox({iframe:true, width:"40%", height:"500px"});
+				   jQuery(".breaktime").colorbox({iframe:true, width:"80%", height:"400px"});
+				   jQuery(".change_password").colorbox({iframe:true, width:"100%", height:"300px"});
+		   } 
+		 else if(screenwidth > 768 && screenwidth <= 996)
+		   {
+                   jQuery(".modifydetails").colorbox({iframe:true, width:"60%", height:"750px"});	
+                   jQuery(".addcontact").colorbox({iframe:true, width:"60%", height:"550px"});
+				   jQuery(".attendance").colorbox({iframe:true, width:"40%", height:"550px"});
+				   jQuery(".breaktime").colorbox({iframe:true, width:"70%", height:"350px"});
+				   jQuery(".change_password").colorbox({iframe:true, width:"70%", height:"300px"});
+		   } 
+		 else if(screenwidth > 996)
+		   {
+                   jQuery(".modifydetails").colorbox({iframe:true, width:"50%", height:"750px"});	
+                   jQuery(".addcontact").colorbox({iframe:true, width:"40%", height:"600px"});
+				   jQuery(".attendance").colorbox({iframe:true, width:"40%", height:"550px"});
+				   jQuery(".breaktime").colorbox({iframe:true, width:"40%", height:"350px"});
+				   jQuery(".change_password").colorbox({iframe:true, width:"40%", height:"300px"});
+		   }  
+
 });

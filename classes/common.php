@@ -1,6 +1,5 @@
 <?php
    session_start();
-   error_reporting(0);
    date_default_timezone_set("Asia/Kolkata");
    define('ITCS',1);
    include_once('includes/db.php');
@@ -15,24 +14,6 @@
    include_once('includes/templates.php');
    include_once('includes/param.php');
    $params= new Param();
-	function sanitize_output($buffer) {
-	
-		$search = array(
-			'/\>[^\S ]+/s',  // strip whitespaces after tags, except space
-			'/[^\S ]+\</s',  // strip whitespaces before tags, except space
-			'/(\s)+/s'       // shorten multiple whitespace sequences
-		);
-	
-		$replace = array(
-			'>',
-			'<',
-			'\\1'
-		);
-	
-		$buffer = preg_replace($search, $replace, $buffer);
-	
-		return $buffer;
-	}
    
    function includeclass($class)
      {

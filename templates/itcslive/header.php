@@ -2,7 +2,7 @@
 
 global $Config,$my,$template;
 
-$template->includejs($this->site."templates/itcslive/js/templatejs/jquery-migrate-1.1.1.js",1,0);
+/*$template->includejs($this->site."templates/itcslive/js/templatejs/jquery-migrate-1.1.1.js",1,0);
 
 $template->includejs($this->site."templates/itcslive/js/templatejs/script.js",2,1);
 
@@ -22,7 +22,7 @@ $template->includejs($this->site."templates/itcslive/js/colorbox/jquery.colorbox
 
 $template->includejs($this->site."templates/itcslive/js/templatejs/kendo.all.min.js",10,0);
 
-//$template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.js",11,0);
+$template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.js",11,0);*/
 
 
 
@@ -87,10 +87,19 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/kendo.all.min
 <?php echo $template->css; ?>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery-migrate-1.1.1.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/script.js"></script> 
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/superfish.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.ui.totop.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.equalheights.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.mobilemenu.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.easing.1.3.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/jquery.mobile.customized.min.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/colorbox/jquery.colorbox.js"></script>
+ <script src="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.all.min.js"></script>
+ <script src="<?php echo $this->site; ?>classes/external/editor/tinymce.min.js"></script>
+ <script language="javascript"> var configurl = '<?php echo $this->site; ?>';</script>
  <?php echo $template->HeadJs(); ?>
- <script>
-  var configurl = '<?php echo $this->site; ?>';
- </script>
 </head>
 
 <body id="page-1">
