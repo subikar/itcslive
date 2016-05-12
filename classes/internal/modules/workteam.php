@@ -21,7 +21,7 @@
 			  }
 			  endforeach;
 			  $template->assignRef('usersInArray',$usersInArray);
-			 $template->display('modules/workteam/index');
+			 $template->display('modules/workteam/index',0);
 		  }
   }
 ?>

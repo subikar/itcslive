@@ -4,7 +4,7 @@
 	   function __construct()
 		 {
 			global $template;
-			$template->display('modules/contentsearch/index');
+			$template->display('modules/contentsearch/index',0);
 		 }
 }
     

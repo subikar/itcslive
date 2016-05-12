@@ -46,7 +46,7 @@
                    <div data-src="<?php echo $this->site; ?>templates/itcslive/images/slide-3.jpg"> 
                       <div class="banner caption fadeIn"><div class="banner-inner">
                           <span>Social Media</span>
-                          <em>As social media experts, we’re keeping with the latest technologies and trends. You won’t need to worry, since we take care of mash-ups, memes, microblogging and hashtags.</em>
+                          <em>As social media experts, we're keeping with the latest technologies and trends. You won't need to worry, since we take care of mash-ups, memes, microblogging and hashtags.</em>
                            <a href="<?php echo $this->site; ?>seo"><span></span>More</a>
                         </div>
                         </div>

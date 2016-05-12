@@ -23,7 +23,7 @@
 				}
 			  }
 			  $template->assignRef('commentsInArray',$commentsInArray);
-			  $template->display('modules/comments/index');
+			  $template->display('modules/comments/index',0);
 		  }
 		  		  
   }

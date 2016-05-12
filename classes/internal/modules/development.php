@@ -3,7 +3,7 @@
        function __construct()
 		  {
 		      global $template;
-			   $template->display('modules/development/index');
+			   $template->display('modules/development/index',0);
 		  }
   }
 ?>

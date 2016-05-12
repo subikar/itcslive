@@ -105,8 +105,8 @@ header{margin:0 auto;position:relative;padding:5px 0 5px 0;}
 #content{width:100%;padding:61px 0 63px 0;margin:0;position:relative;z-index:1;}
 #page-1 #content{padding:47px 0 53px 0;}
 .div-search{float:right;margin:5px 0 0 0;border-top:1px solid #c5c5c5;box-shadow:inset 0 -1px 0 #d3d3d3;border-radius:30px;}
-.div-mpsearch{margin:10px 5px 10px 5px; background:#dadada; border: solid 1px #ff4400 !important; /*border-bottom:1px solid #eff0f0; border-top:1px solid #c5c5c5;*/ box-shadow:inset 0 -1px 0 #d3d3d3;border-radius:30px;}
-#search input, #myproject input{width:158px;border:none;height:20px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;height:20px;color:#fff;display:inline-block;float:left;background:url(../images/bg-li-transparent.png) 0 0 no-repeat;padding:6px 10px 6px 20px;}
+.div-mpsearch{margin:10px 5px 10px 5px; background:#fff; border: solid 1px #ff4400 !important; /*border-bottom:1px solid #eff0f0; border-top:1px solid #c5c5c5;*/ box-shadow:inset 0 -1px 0 #d3d3d3;border-radius:30px;}
+#search input, #myproject input{width:158px;border:none;height:20px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;height:20px;color:#000;display:inline-block;float:left;background:url(../images/bg-li-transparent.png) 0 0 no-repeat;padding:6px 10px 6px 20px;}
 #search .search_button{background:url(../images/search-button.png) 0 0 no-repeat;width:15px;height:15px;display:inline-block;margin:8px 15px 0 0;float:left;}
 #search .search_button:hover{background-position:right 0;}
 .lightbox-image{display:inline-block;position:relative;}
@@ -284,6 +284,16 @@ z-index:999;
 
 
 
+/* Mobile Menu */
+.desktop-none {
+    display: none;
+}
+/* //Mobile Menu */
+
+
+
+
+
 /* Responsive */
 
 
@@ -397,6 +407,24 @@ ul.ourworks_total_block li{width:40%;}
 .tabs .div-tabs .tab-content .wrapper-extra .extra-wrap {background:#fbfbfb; border-radius:5px; -moz-border-radius:5px;  -webkit-border-radius:5px; padding:15px;}
 
 .tabs > .div-tabs {padding-bottom:10px; border-color:#ed835d;}
+
+
+/* Mobile Menu */
+.mobile-none {
+    display: none;
+}
+.desktop-none {
+    display: block;
+}
+
+
+.mobile-nav-list {float: left; width: 15% !important;}
+.mobile-logo-outer  {float: left; width:20% !important;}
+.mobile-menu-links {float:left; width:65% !important;}
+
+/* //Mobile Menu */
+
+
 /* //12-05-2016 (S.G) */
 }
 

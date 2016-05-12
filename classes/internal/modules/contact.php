@@ -9,7 +9,7 @@
 		function displayForm()
 		 {
 		    global $template;
-			$template->display('modules/contact/form');
+			$template->display('modules/contact/form',0);
 		 } 
 	}
     

@@ -11,7 +11,7 @@
 			  $db->setQuery($Query);
 			  $ClientsSpeakCount = $db->getOne();
 			  $template->assignRef('ClientsSpeakCount',$ClientsSpeakCount);
-			  $template->display('modules/clientspeak/post');
+			  $template->display('modules/clientspeak/post',0);
 		  } 
   }
 ?>

@@ -30,7 +30,7 @@ error_reporting(0);
 				 }
 				 
 			  $template->assignRef('worksInArray',$worksInArray);
-			 $template->display('modules/ongoingwork/index');
+			 $template->display('modules/ongoingwork/index',0);
 		  }
   }
 ?>

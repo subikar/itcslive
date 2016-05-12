@@ -120,7 +120,7 @@ defined ('ITCS') or die ("Go away.");
 		   {
 		     $server = IRequest::get('SERVER');
 			 $ScriptUri = $server['REQUEST_URI'];
-			// $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
+			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
 			 if(!is_dir(IPATH_ROOT.DS.'cache/html'))
 			   mkdir(IPATH_ROOT.DS.'cache/html');
 			 
@@ -135,20 +135,24 @@ defined ('ITCS') or die ("Go away.");
 			 else    
 		       return 'no';
 		   }  
-		 function SetCache($content)
+		 function SetCache($content,$cache=1)
 		   {
+
 		     if($this->cache == 1)
 			   {
 				 $server = IRequest::get('SERVER');
 				 $ScriptUri = $server['REQUEST_URI'];
 				 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
-				 $fp = fopen($filename, 'w') or die("Unable to open file!");
+				 $fp = fopen($filename, 'a') or die("Unable to open file!");
+				// $content = fread($fp, filesize($filename)).$content;
 				 fwrite($fp, $content);
 				 fclose($fp);
 			   }
+
+			   
 			 echo $content;
 		   }  
-		 function display($file)
+		 function display($file,$cache=1)
 		   {
 		       global $my;  
 			   ob_start(); 
@@ -156,7 +160,10 @@ defined ('ITCS') or die ("Go away.");
 			   $content = ob_get_contents();
 			   $content = $this->sanitize_output($content);
 			   ob_end_clean();
-			   $this->SetCache($content);
+			   if($cache == 0)
+			     echo $content;
+			   else 	 
+			     $this->SetCache($content);
 			   
 		   }
 			function sanitize_output($buffer) {
@@ -197,7 +204,7 @@ defined ('ITCS') or die ("Go away.");
 			 endif;
 			 $this->assignRef('MenuInArray',$MenuInArray);
 			 $this->assignRef('MenuID',$menualias);
-			 $this->display('menu');
+			 $this->display('menu',0);
 		   }
 		  function SetPagination($count,$template = 'pagination/index')
 		   {

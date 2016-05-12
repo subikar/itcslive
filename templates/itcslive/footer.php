@@ -96,7 +96,7 @@ $accessPage_id = array("4","26","33","34","36","37","38","21","22","87"); ?>
 
    <div class="main-aside-footer">
 
-       <?php echo $this->display( 'footermenu' );?>
+       <?php echo $this->display( 'footermenu',0);?>
 
    </div>
 

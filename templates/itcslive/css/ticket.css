@@ -44,8 +44,8 @@
 .boiteHeader .info { width:68%; float:right; font-size:12px;}
 .left_part h2 { font-size:16px; color:#999999;}
 .boiteContent .title { margin:10px 0px; font-size:12px;}
-.defaultBoxLine1 { background:#e1ebf1; border-bottom:1px solid #666666; padding:5px;}
-.defaultBoxLine2 { background:#e9f5fc; border-bottom:1px solid #666666; padding:5px;}
+.defaultBoxLine1 { background:#FFF; border-bottom:1px solid #666666; padding:5px;}
+.defaultBoxLine2 { background:#FFF; border-bottom:1px solid #666666; padding:5px;}
 .user { width:50%; float:left;}
 .date_time { width:50%; float:right;font-size:12px; text-align:right; }
 .site_description { margin:0px; padding:0;}

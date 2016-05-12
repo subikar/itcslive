@@ -27,7 +27,7 @@ error_reporting(0);
 			  endforeach;
 			 
 			  $template->assignRef('testimonialsInArray',$testimonialsInArray);
-			  $template->display('modules/testimonials/index');
+			  $template->display('modules/testimonials/index',0);
 		  }
 		  
 		 /*  function PopulateTestimonials()

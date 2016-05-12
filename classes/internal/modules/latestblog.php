@@ -18,7 +18,7 @@
 			 $db->setQuery($Query,$start,$Limit);
 			 $LatestBlogPost = $db->loadObjectList();
 			 $template->assignRef('LatestBlogPost',$LatestBlogPost);
-			 $template->display('modules/latestblog/post');
+			 $template->display('modules/latestblog/post',0);
 		  }   
   }
 ?>
