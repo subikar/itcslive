@@ -1,7 +1,7 @@
 <?php defined ('ITCS') or die ("Go away."); 
 global $Config;
 ?>
-<script src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script  src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.carouFredSel-6.1.0-packed.js"></script>
      <script  src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.touchSwipe.min.js"></script> 
      <script>
 	 $(window).load (

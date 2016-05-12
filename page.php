@@ -21,6 +21,7 @@
 		  $template->display('body');
 		  $template->display('footer');
 		  $content = ob_get_contents();
+		  $content = sanitize_output($content);
 		  ob_end_clean();
 		  $template->SetCache($content);
       

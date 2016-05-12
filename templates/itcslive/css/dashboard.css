@@ -32,12 +32,12 @@
 .defaultBoxLine table thead{background-color:#4EB6F3;}
 .leave_record_box{float:left;width:40%;}
 #form input{border-right:medium none;border-left:medium none;-moz-border-top-colors:none;-moz-border-right-colors:none;-moz-border-bottom-colors:none;-moz-border-left-colors:none;border-image:none;background:none repeat scroll 0px 0px #DADADA;border-width:1px medium;border-style:solid none;border-color:#C5C5C5 -moz-use-text-color #F2F5F5;border-radius:30px !important;box-shadow:0px -1px 0px #D3D3D3 inset;color:#999;padding:9px 10px 7px;width:20%;height:34px;font:14px/18px Arial,Helvetica,sans-serif;box-sizing:border-box;margin:15px;}
-#form .button-1{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:16px;padding:5px 10px 10px 10px;background:none repeat scroll 0% 0% #ff4400;color:#FFF;position:relative;border-radius:30px;width:13%;}
+#form .button-1{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:16px;padding:5px 10px 10px 10px;background:none repeat scroll 0% 0% #E83E01;color:#FFF;position:relative;border-radius:30px;width:13%;}
 #form .k-select{top:17px;right:0;}
 #projects .article-body .boiteContent{border:solid 1px #E83E01;}
 table{width:100%;border-collapse:collapse;}
 tr:nth-of-type(odd){background:#eee;}
-th{background:#FF4400;color:white;font-weight:bold;}
+th{background:#E83E01;color:white;font-weight:bold;}
 td, th{padding:6px;border:1px solid #ccc;text-align:left;}
 .input_1{-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;background:none repeat scroll 0 0 #ffffff;border-color:#c5c5c5 -moz-use-text-color #f2f5f5;border-image:none;border-left:medium none;border-radius:30px !important;border-right:medium none;border-style:solid none;border-width:1px medium;box-shadow:0 -1px 0 #d3d3d3 inset;box-sizing:border-box;color:#999999;font:14px/18px Arial,Helvetica,sans-serif;height:34px;padding:9px 10px 7px;width:100%;}
 .table_edituser{margin:0;}

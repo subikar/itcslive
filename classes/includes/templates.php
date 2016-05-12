@@ -4,9 +4,10 @@ defined ('ITCS') or die ("Go away.");
          
 		 var $TemplatePath = NULL;
 		 var $Js = array();
-		 var $css = NULL;
+		 var $css = '';
 		 var $MinifyJS = array();
 		 var $priority = 0;
+		 var $csspriority = 0;
 		 function __construct()
 		   {
 		      global $Config;
@@ -117,7 +118,7 @@ defined ('ITCS') or die ("Go away.");
 		   {
 		     $server = IRequest::get('SERVER');
 			 $ScriptUri = $server['REQUEST_URI'];
-			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
+			// $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
 			 if(!is_dir(IPATH_ROOT.DS.'cache/html'))
 			   mkdir(IPATH_ROOT.DS.'cache/html');
 			 
@@ -133,13 +134,13 @@ defined ('ITCS') or die ("Go away.");
 		   }  
 		 function SetCache($content)
 		   {
-		     $server = IRequest::get('SERVER');
+/*		     $server = IRequest::get('SERVER');
 			 $ScriptUri = $server['REQUEST_URI'];
 			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
 			// print($filename); exit;
 			 $fp = fopen($filename, 'w') or die("Unable to open file!");
 			 fwrite($fp, $content);
-			 fclose($fp);
+			 fclose($fp);*/
 		   }  
 		 function display($file)
 		   {

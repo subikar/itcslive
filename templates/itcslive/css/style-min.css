@@ -2,7 +2,7 @@ body {font-family:Arial, Helvetica, sans-serif;}
 ul, li {margin:0; padding:0; vertical-align:top;}
 
 a {
-    color: #55b8f3;
+    color: #ff4400;
     cursor: pointer;
     text-decoration: none;
 }
@@ -26,7 +26,7 @@ h1 {font-size:20px;}
 
 .table_edituser ul li:nth-of-type(2n+1){display:inline-block; width:30%; text-align:left; margin-top:5px;}
 .table_edituser ul li:nth-of-type(2n+2){display:inline-block; width:60%; text-align:left; margin-top:5px;}
-.table_edituser ul li input[type="button"] {background:#ff4400 !important; border:none !important; border-radius:0; height:30px; width:auto; color:#fff; text-align:center; cursor:pointer; float:right;}
+.table_edituser ul li input[type="button"] {background:#E83E01 !important; border:none !important; border-radius:0; height:30px; width:auto; color:#fff; text-align:center; cursor:pointer; float:right;}
 .table_edituser ul li.assign_other .k-multiselect-wrap {background:none;}
 .table_edituser ul li.assign_other .k-input {width:100% !important;}
 ol.shared_list {margin:0 30px;}
@@ -49,7 +49,7 @@ input.small_field  {width:85% !important;}
 .right_side {width:60%; display:inline-block;}
 .rowticket .boiteHeader .title {display:inline-block;color:#fff; width:auto; position:relative; margin:0; padding:0;}
 .rowticket .boiteHeader #req_no {display:inline-block;color:#fff; float:right}
-a.close_ticket {background:#ff4400 !important; border:none !important; border-radius:0; height:30px; width:auto; color:#fff; text-align:center; cursor:pointer; float:right; padding:0 5px; margin:10px; line-height:2}
+a.close_ticket {background:#E83E01 !important; border:none !important; border-radius:0; height:30px; width:auto; color:#fff; text-align:center; cursor:pointer; float:right; padding:0 5px; margin:10px; line-height:2}
 a.close_ticket:hover {color:#000 !important;}
 .view_ticket {list-style-type:none;}
 .view_ticket ul li {margin:5px 0;}
@@ -63,7 +63,7 @@ a.close_ticket:hover {color:#000 !important;}
 .view_ticket ul li label {font-size:12px;}
 .rowticket .padDiv { height:auto; overflow:auto; background:#fff; width:100%;}
 .rowticket .right_side .padDiv { height:320px; overflow:auto; background:#fff; padding:5px;}
-.rowticket .left_side input[type="submit"] {background:#ff4400 !important; border:none !important; border-radius:0; height:30px; width:auto; color:#fff; text-align:center; cursor:pointer; margin:10px 0 0; float:right;}
+.rowticket .left_side input[type="submit"] {background:#E83E01!important; border:none !important; border-radius:0; height:30px; width:auto; color:#fff; text-align:center; cursor:pointer; margin:10px 0 0; float:right;}
 .rowticket .left_side input[type="submit"]:hover {color:#000 !important;}
 .login_first #form input {color:#000;}
 
@@ -154,7 +154,7 @@ margin-top:0px;
 
 /*our work css*/
 .our_work {margin:0; padding:0; background:#fff;}
-.title {margin:-1px 0 0 -1px; background:#4EB6F3; padding:5px; text-indent:10px; font-size:20px; color:#fff; font-family:Arial, Helvetica, sans-serif; width:100%; position:fixed;}
+.title {margin:-1px 0 0 -1px; background:#E83E01; padding:5px; text-indent:10px; font-size:20px; color:#fff; font-family:Arial, Helvetica, sans-serif; width:100%; position:fixed;}
 .description {padding:20px 10px;}
 
 /*17.02.2015*/
@@ -166,7 +166,7 @@ img {
 
 
 .heder_left{ width:35%; display:inline-block;margin:0px; padding:0px; vertical-align:top; max-height:300px;overflow-y: scroll;}
-.contact-us{background: -webkit-linear-gradient(#ff4400, #c23502); line-height:30px; border-radius:5px;}
+.contact-us{background: #E83E01; line-height:30px; border-radius:5px;}
 .free-quote{ color:#FFFFFF; text-decoration:blink;}
 @media only screen and (max-width: 479px) {
 .change_password_pop label {display:block; width:80%;}
