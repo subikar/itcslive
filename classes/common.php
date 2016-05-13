@@ -6,7 +6,7 @@
    include_once('includes/request.php');
    include_once('includes/mainframe.php');
    include_once('includes/mail.php');
-   include_once('external/jsmin/jsmin.php');
+   //include_once('external/jsmin/jsmin.php');
    global $db,$my,$mainframe,$params;
    $db = new iFactory;
    $mainframe = new MainFrame();

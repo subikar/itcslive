@@ -22,14 +22,15 @@ error_reporting(0);
 		   //Code and Functions For contact Us.
 		   function createticket()
 		   {
-		   		global $db,$template,$mainframe;
+		   		global $db,$template,$mainframe,$Config;
 		   		$post=IRequest::get("POST");
 				//print_r($post); exit;
-			if($post["captcha_code"]!=$_SESSION["captcha_code"])
+/*			if($post["captcha_code"]!=$_SESSION["captcha_code"])
 			{
+			    echo "Sorry Captcha Error";
 				exit;
 			}
-				unset($post["task"]);
+*/				unset($post["task"]);
 				unset($post["view"]);
 				unset($post["captcha_code"]);
 				
@@ -40,16 +41,17 @@ error_reporting(0);
 										  'status'=>1,
 			                           );
 			$this->post = $PostArgumentsInArray;
+			//print_r($this->post); exit;
 			parent::bind('formdata');
 			parent::save();
-			
+		//	print("test"); exit;
 			if((int)$post["category"] > 0)
 				{
 					 $Query = "select category_name from #__category Where type='ticket' AND id=".$db->quote($post["category"]);
 					 $db->setQuery($Query);
 					$post["category"]=$db->getOne();
 				}	
-			$this->sendmailToAdmin($post);
+			//$this->sendmailToAdmin($post);
 		   $mainframe->redirect($Config->site.'thank-you');
 		   
 		   }

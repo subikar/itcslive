@@ -1,5 +1,5 @@
 <?php 
-    //ini_set('display_error',0); 
+    //ini_set('display_error',1); 
 	error_reporting(0); 
     if(!defined('IPATH_BASE'))
     define('IPATH_BASE',__DIR__);
