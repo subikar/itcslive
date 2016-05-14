@@ -416,7 +416,7 @@ a.attachment {color:#fff}
 }
 .fa-user_1:before {color:#fff;content: "\f007";}
 .fa-check::before {color:#fff;content: "\f00c";}
-.fa-pencil::before {color:#0984B7;content: "\f040"; font-size: 13px;  margin-left: 10px;  vertical-align: top;}
+.fa-pencil::before {color:#EE3300;content: "\f040"; font-size: 13px;  margin-left: 10px;  vertical-align: top;}
 .meshim_widget_components_chatButton_Button .button_bar{background:#E83E01 !important;}
 .boiteContent .task_ongoing { background:#E83E01;/*--background:linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); --*/border-top:1px solid #ff4400;text-transform:uppercase; font-size:18px !important; color:#FFF !important; margin:0px; line-height:33px; padding:0 0 0 8px;}
 li.bulet2 {background:url(../images/bulet2.png) left 4px no-repeat; list-style-type:none !important; font-size:13px; margin-bottom:20px;}
@@ -540,7 +540,7 @@ a.fc-more {color:#ff4400 !important;}
 #content #projects .attendencediv .k-widget span input{border: solid 1px #ff7d4e;border-radius: 10px !important;
     color: #000 !important;}
 
-
+.pagemobile{width:100%;}
 
 
 
