@@ -69,8 +69,6 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 <link rel="icon" href="images/favicon.ico">
 
 <link rel="shortcut icon" href="<?php echo $this->site; ?>templates/itcslive/images/favicon.ico" />
-
-<link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/dashboard.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/reset.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/skeleton.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/superfish.css">
@@ -111,6 +109,7 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 <!-- For Mobile End -->
 
 <?php if($my->uid > 0):?>
+<link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/dashboard.css">
 <!-- For Inner Pages -->
 <link rel=stylesheet type="text/css" media=all href="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.common.min.css"/>
 <script src="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.all.min.js"></script>
