@@ -523,7 +523,7 @@ select {background:#fff;}
 .fc-row .fc-content-skeleton tbody td, .fc-row .fc-helper-skeleton tbody td {background:#fff; border-right:1px solid #ddd;}
 .fc-basic-view td.fc-week-number span, .fc-basic-view td.fc-day-number {background:#fff !important; border-right:1px solid #ddd !important;}
 .fc-day-number.fc-other-month {background:#fff !important; color:#c8c8c8; opacity:1 !important;}
-#attendance_details td a {color:#4EB6F3}
+#attendance_details td a {color:#E83E01}
 a.fc-more {color:#ff4400 !important;}
 .fc-unthemed .fc-popover {margin-top:87px;}
 .fc-more-popover .fc-event-container {overflow:auto; max-height:151px;}
@@ -537,7 +537,8 @@ a.fc-more {color:#ff4400 !important;}
 /*css done on 7/3/2015*/
 .tasktime {width:118px !important; margin-bottom:3px;}
 .tasktime input {width:50px !important;}
-
+#content #projects .attendencediv .k-widget span input{border: solid 1px #ff7d4e;border-radius: 10px !important;
+    color: #000 !important;}
 
 
 

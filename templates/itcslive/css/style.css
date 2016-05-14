@@ -10,7 +10,9 @@ url('fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');font-weigh
 .fa-twitter-square:before{content:"\f081";font-size:40px;}.fa-google-plus-square:before{content:"\f0d4";font-size:40px;}.fa-google-plus:before{content:"\f0d5";}
 .fa.fa-facebook-square, .fa.fa-twitter-square, .fa.fa-google-plus-square, .fa.fa-youtube-square{font-size:26px;}
 .fa-phone:before{content:"\f095";font-size:20px;color:#ff4400;}
-.fa-skype:before{content:"\f17e";font-size:20px;color:#ff4400;}.fa-user:before{content:"\f007";font-size:20px;color:#ff4400;margin:0 0 0 3px;}.fa-dropbox:before{content:"\f16b"}
+.fa-skype:before{content:"\f17e";font-size:20px;color:#ff4400;}
+.fa-user:before{content:"\f007";font-size:20px;color:#ff4400;margin:0 0 0 3px;}.fa-dropbox:before{content:"\f16b"}
+.fa-envelope:before{content:"\f0e0";font-size:20px;color:#ff4400;margin:0 0 0 3px;}
 .fa-clock-o:before{content:"\f017"}
 .fa-building-o:before{content:"\f07c";}
 .fa-paperclip:before{content:"\f0c6";color:#5fd7fe;}
@@ -211,7 +213,7 @@ figure img{max-width:100%;}
 .our_goal{width:30%;display:inline-block;margin:0 5px;text-align:left;}
 p.our_goal_p{background:url(../images/arrow_left_small.png) 0 6px no-repeat;padding:0 0 0 20px;margin:0;}
 td.social_icons{background:#fff;}
-#content .row1 .boiteHeader ol, li .fa-user:before{color:#FFF;}
+#content .row1 .boiteHeader ol, li .fa-user:before{/*color:#FFF;*/ color:#ef3d00;}
 .usefull_article li{margin:5px 0;}
 .usefull_article a{background:url(../images/arrow_left_small.png) 0 6px no-repeat;padding:0 0 0 20px;margin:0;color:#E83E01;}
 .usefull_article a:hover{color:#000}
@@ -500,6 +502,45 @@ ul.foot-quicklinks {margin-top:10px; margin-bottom:10px;}
 ul.foot-quicklinks li {float:left; margin-left:5px;}
 
 .grid_mob h2.bot-6 {margin-top:10px;}
+
+ul.foot-quicklinks {}
+ul.foot-quicklinks li i {color:#ef3d00; font-size:16px;}
+
+.main-aside-footer {display:none !important;}
+.footer-quicklinksbtn-sp {width:100%; background:#CCCCCC; padding:15px 0px; text-align:center;}
+
+
+
+
+.mobile_contact, .mobile-bottom {
+    background: #f0f0f0 none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px #dcdcdc inset;
+    float: left;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.mobile_contact .phone, .mobile_contact .email {
+    float: left;
+    width: 50%;
+}
+
+.mobile_contact .email a {
+    float: right;
+}
+
+.mobile_contact a {
+    background: #ddd none repeat scroll 0 0;
+    border-radius: 25px;
+    color: #525252;
+    font-weight: bold;
+    padding: 10px 30%;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
 /* //14-05-2016 - (S.G) */
 
 }

@@ -11,6 +11,5 @@ global $Config;
  </form>
  <div class="clear"></div>
  <div id="content_search_result" class="content_search_result" style="display:none;">
-
  </div>
 </div>

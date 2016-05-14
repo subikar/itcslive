@@ -107,21 +107,15 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 <script src="<?php echo $this->site; ?>templates/itcslive/js/jPushMenu.js"></script>
 <!-- For Mobile End -->
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
-<script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/script.js"></script>
-
-
-
-<?php if($my->id > 0):?>
+<?php if($my->uid > 0):?>
 <!-- For Inner Pages -->
 <link rel=stylesheet type="text/css" media=all href="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.common.min.css"/>
 <script src="<?php echo $this->site; ?>templates/itcslive/js/auto_jqueryui/kendo.all.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.3.12/tinymce.min.js"></script>
 <!-- For Inner Pages -->
 <?php endif; ?>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
+<script src="<?php echo $this->site; ?>templates/itcslive/js/templatejs/script.js"></script>
 
 <?php echo $template->HeadJs(); ?>
 
@@ -223,7 +217,7 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 
           </nav>
 
-            <?php //includemodule('contentsearch'); ?>
+            <?php includemodule('contentsearch'); ?>
 
           <div class="clear"></div>
 
@@ -295,4 +289,3 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 <section id="content">
 <div class="container_12">
 <?php endif; ?>
-

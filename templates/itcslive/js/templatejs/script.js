@@ -58,7 +58,7 @@ var Content=new function()
 		}
 	}
 }
-var clicks = 1;
+var clicks = 0;
 jQuery(document).ready(function(){
  var screenwidth = jQuery(document).width();
  if(screenwidth <= 320)
