@@ -118,6 +118,10 @@ defined ('ITCS') or die ("Go away.");
            }
 		 function CheckCache()
 		   {
+		     if($config->CacheEnable == false)
+			   {
+			      return 'no';
+			   }
 		     $server = IRequest::get('SERVER');
 			 $ScriptUri = $server['REQUEST_URI'];
 			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
@@ -137,8 +141,8 @@ defined ('ITCS') or die ("Go away.");
 		   }  
 		 function SetCache($content,$cache=1)
 		   {
-
-		     if($this->cache == 1)
+             global $config, $my;  
+		     if($this->cache == 1 && $config->CacheEnable == true && $my->id <= 0)
 			   {
 				 $server = IRequest::get('SERVER');
 				 $ScriptUri = $server['REQUEST_URI'];

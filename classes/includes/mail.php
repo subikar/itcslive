@@ -15,6 +15,7 @@
 			$userparam = $params->getParams('user');
 			$MailType = $userparam['mail_st'];
 			//print($MailType); exit;
+			$MailType = 'Falconide';
 			if($MailType == 'Server')
 			  { 
 					include_once('Mail.php');
@@ -50,7 +51,7 @@
 					$from = $this->From;
 					$from_name = $userparam['mail_sender_name'];
 					$content = $this->Message;
-					$recipients = 'subikar.web@gmail.com';
+					$recipients = $this->To;
 					
 					//$this->To;
 					$url = "https://api.falconide.com/falconapi/web.send.rest"; 

@@ -391,7 +391,7 @@ completetaskdiv a {padding-bottom:10px;}
 
 
 /*modified css 20/10/2014*/
-.article-body h5.title_1 {background:#FFF /*linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 0.34) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)*/; margin:0 0 3px 0px; padding:8px 0 8px 5px; border-bottom:1px solid #FFF; color:#ff5818; font-size:17px; text-transform:uppercase;border: solid 1px #ff5818;}
+.article-body h5.title_1 {background:#FFF /*linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 0.34) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)*/; margin:0 0 7px 0px; padding:8px 0 8px 5px; border-bottom:1px solid #FFF; color:#ff5818; font-size:17px; text-transform:uppercase;border-bottom: 1px #ff5818;box-shadow: 0px 1px 1px #ff5818;}
 .color1 {background:#FFF;}
 .defaultBoxLine ul li span a {padding:0; text-transform:uppercase;}
 .menu-our-services-container {/*--background: rgba(255,255,255,1);background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(213,213,213,1)));background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5d5d5', GradientType=0 ); border:1px solid #b0b0b0b;margin:5px 4px; border-radius:5px;--*/background: #e83e01;}
@@ -444,7 +444,7 @@ h5.bulet1 {background:url(../images/bulet2.png) left center no-repeat; padding:0
 
 /*modified on 27/10/2014*/
 .boiteContent ul li {background:none repeat scroll 0 0 #FFF; list-style-type:none; padding:5px 0 5px 10px; margin:1px 0 0;}
-.boiteContent span {color:#014886;}
+.boiteContent span {color:#EE3300;}
 .fa {line-height:normal;}
 .fa-trash-o:before {font-size:18px;}
 
@@ -517,7 +517,7 @@ select {background:#fff;}
 .internal_team{ color:#FF0000; text-align:right;}.task_over{color:#FF0000;} 
 .fa-arrow-circle-o-down:before {color:#fff; content:'\f01a';font-size: 21px;padding: 5px;background-color: #FF4400; display:inline-block; vertical-align:middle;}
 
-#total_task td a {color:#4EB6F3}
+#total_task td a {color:#E30}
 
 .fc td {background:#fff;}
 .fc-row .fc-content-skeleton tbody td, .fc-row .fc-helper-skeleton tbody td {background:#fff; border-right:1px solid #ddd;}

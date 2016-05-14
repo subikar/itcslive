@@ -168,6 +168,10 @@ img {
 .heder_left{ width:35%; display:inline-block;margin:0px; padding:0px; vertical-align:top; max-height:300px;overflow-y: scroll;}
 .contact-us{background: #E83E01; line-height:30px; border-radius:5px;}
 .free-quote{ color:#FFFFFF; text-decoration:blink;}
+#primary .wpcf7 #addContactForm .table_edituser ul li span input[type=checkbox]{width: 17px !important;margin-top: 13px;}
+.fa-truck:before{color: #E30;}
+
+
 @media only screen and (max-width: 479px) {
 .change_password_pop label {display:block; width:80%;}
 .change_password_pop input[type="password"]{display:block; width:98%;}

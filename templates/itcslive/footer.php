@@ -1,6 +1,10 @@
+<?php  if(isset($this->Content->isfullpage) && $this->Content->isfullpage == 1): ?>
+<!-- No Div for Full Page -->
+<?php else: ?>
 </div>		
-
 </section>
+<?php endif; ?>
+
 
 <?php  $PageUriInArray=array_values(array_filter(explode( "/",$_SERVER['REQUEST_URI'])));  
 

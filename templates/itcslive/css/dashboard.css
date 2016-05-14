@@ -3,7 +3,7 @@
 .boiteHeader{margin-top:15;padding:5px;background:#E83E01;line-height:20px;height:20px;}
 .boiteHeader ol{float:right;margin:0;padding:0;}
 .boiteHeader li{float:right;list-style:none;display:inline;}
-.boiteHeader li a{float:left;display:inline;color:#FFFFFF;margin-left:3px;text-decoration:none;}
+.boiteHeader li a{float:left;display:inline;color:#FFFFFF;margin-left:14px;text-decoration:none;}
 .boiteHeader h5{float:left;color:#FFFFFF;margin:0;padding:0;font-size:12pt;text-transform:uppercase;}
 .boiteHeader h5 a{color:#FFFFFF;margin-left:3px;text-decoration:none;}
 .boiteContent{margin:5px;clear:both;margin:0px 5px 0px 5px;}
@@ -12,7 +12,7 @@
 .boiteContent span{color:#000;}
 .boiteContent textarea{width:99%;height:auto;}
 .contact:before{content:"\f0c0";font-size:20px;}
-.add:before{content:"\f196";}
+.add:before{content:"\f196";position: relative;left: -6px;}
 .row1{width:34%;}
 .marginright{margin-right:1%;}
 .row2{width:62%;float:right;}
@@ -31,7 +31,7 @@
 .box_area .each_box_area{width:24%;float:left;margin:5px;}
 .defaultBoxLine table thead{background-color:#4EB6F3;}
 .leave_record_box{float:left;width:40%;}
-#form input{border-right:medium none;border-left:medium none;-moz-border-top-colors:none;-moz-border-right-colors:none;-moz-border-bottom-colors:none;-moz-border-left-colors:none;border-image:none;background:none repeat scroll 0px 0px #DADADA;border-width:1px medium;border-style:solid none;border-color:#C5C5C5 -moz-use-text-color #F2F5F5;border-radius:30px !important;box-shadow:0px -1px 0px #D3D3D3 inset;color:#999;padding:9px 10px 7px;width:20%;height:34px;font:14px/18px Arial,Helvetica,sans-serif;box-sizing:border-box;margin:15px;}
+#form input{border-right:medium none;border-left:medium none;-moz-border-top-colors:none;-moz-border-right-colors:none;-moz-border-bottom-colors:none;-moz-border-left-colors:none;border-image:none;background:none repeat scroll 0px 0px #FFF;border-width:1px medium;border-style:solid none;border-color:#C5C5C5 -moz-use-text-color #F2F5F5;border-radius:30px !important;box-shadow:0px -1px 0px #D3D3D3 inset;color:#484747;padding:9px 10px 7px;width:20%;height:34px;font:14px/18px Arial,Helvetica,sans-serif;box-sizing:border-box;margin:15px;}
 #form .button-1{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:16px;padding:5px 10px 10px 10px;background:none repeat scroll 0% 0% #E83E01;color:#FFF;position:relative;border-radius:30px;width:13%;}
 #form .k-select{top:17px;right:0;}
 #projects .article-body .boiteContent{border:solid 1px #E83E01;}
@@ -47,6 +47,21 @@ td, th{padding:6px;border:1px solid #ccc;text-align:left;}
 .myappointment .each_box_area{background:#fff;line-height:30px;}
 .myappointment .each_box_area span.k-autocomplete{width:100%;}
 .myappointment .each_box_area span.k-datepicker{width:100%;}
+
+#content .container_12 .box_area #form #hasrequirement{width: 18px;position: relative;top: -19px;left: -10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media
 only screen and (max-width:580px),
 (min-device-width:240px) and (max-device-width:580px){.table_edituser{margin:0;}

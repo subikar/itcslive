@@ -39,31 +39,35 @@ $user_id=((int)$Page->author)? $Page->author : $my->uid;
               <div class="panel-body no-padding">
 			  	<div class="panel-body-left">
 				<div class="input-group">
-				  	<span class="input-group-addon"><i class="fa fa-link"></i></span>
+				  	<span class="input-group-addon" title="Page Url"><i class="fa fa-link"></i></span>
 				<input class="form-control" type="text" name="alias" value="<?php echo $Page->alias; ?>" placeholder="Enter alias" onblur="return Page.checkDuplicate(this);" />
 				 <span id="error_alias" style="color:#FF00CC;"></span>
 				  </div>
 				<div class="input-group">
-				  	<span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+				  	<span class="input-group-addon" title="Page Title"><i class="fa fa-pencil-square-o"></i></span>
 					<input class="form-control" type="text" name="title" value="<?php echo $Page->title; ?>" placeholder="Enter Title"/>
 				 <span id="error_title" style="color:#FF00CC;"></span>
 				  </div>
 				<div class="input-group">
-				  	<span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+				  	<span class="input-group-addon" title="Page Class"><i class="fa fa-pencil-square-o"></i></span>
 					<input class="form-control" type="text" name="pageclass" value="<?php echo $Page->pageclass; ?>" placeholder="Enter Page class"/>
 				 <span id="error_title" style="color:#FF00CC;"></span>
 				  </div>				  
 				  <div class="input-group">
-				  	<span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+				  	<span class="input-group-addon" title="Page Meta Title"><i class="fa fa-pencil-square-o"></i></span>
 					<input class="form-control" type="text" name="metatitle" value="<?php echo $Page->metatitle; ?>" placeholder="Enter Meta Title" />
 				  </div>
 				  <div class="input-group">
-				  	<span class="input-group-addon"><i class="fa fa-list-alt"></i></span>
+				  	<span class="input-group-addon" title="Page Meta Description"><i class="fa fa-list-alt"></i></span>
 					<input class="form-control" type="text" name="metadescription" value="<?php echo $Page->metadescription; ?>" placeholder="Enter Meta Description" />
 				  </div>
 				  <div class="input-group">
-				  	<span class="input-group-addon"><i class="fa fa-key"></i></span>
+				  	<span class="input-group-addon" title="Page Meta Keyword"><i class="fa fa-key"></i></span>
 					<input class="form-control" type="text" name="metakeyword" value="<?php echo $Page->metakeyword; ?>" placeholder="Enter Meta Keyword" />
+				  </div>
+				  <div class="input-group">
+				  	<span class="input-group-addon" title="Select Is Full Page"><i class="fa fa-key"></i></span>
+					<select class="form-control" name="isfullpage"><option value="0" <?php echo ($Page->isfullpage ==0)?'selected="selected"':''; ?>>No</option><option value="1"<?php echo ($Page->isfullpage ==1)?'selected="selected"':''; ?>>Yes</option></select>
 				  </div>
 				  <div class="input-group">
 				  	<span class="input-group-addon"><i class="fa fa-th"></i></span>

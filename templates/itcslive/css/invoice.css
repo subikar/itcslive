@@ -1,7 +1,7 @@
 .total_image_body { /*background:url('../images/itcslive.png') no-repeat top left;*/ background:none;}
 .invoice_bind{width:99.8%; float:left; /*padding:10px;*/ margin: 0 0 36px;}
 .invoice_bind .invoice_to{padding-bottom:8px; width:50%; float:left;}
-.invoice_bind .invoice_to span  { /*padding:0 20px;*/ border-radius:3px; /*background-color:#2979CA;*/ color:#2979CA; font-weight:bold; font-size:24px; padding-bottom:3px; line-height:50px;}
+.invoice_bind .invoice_to span  { /*padding:0 20px;*/ border-radius:3px; /*background-color:#2979CA;*/ color:#E83E01; font-weight:bold; font-size:24px; padding-bottom:3px; line-height:50px;}
 .invoice_bind .invoice_to textarea { height:69px;border-radius:3px;resize: none; border:0;}
 .invoced_company_details{width:100%; float:left;}
 .invoced_company_details .companylogo{width: 156px; height: 64px; margin: 0px;background: url('images/itcs-logo.png') repeat scroll 0% 0% transparent; float:right;}
@@ -17,12 +17,12 @@
 .row-fluid ul li .pull-right { float:right;width:59%;}
 .row-fluid ul li .pull-right .currency-sign { float:left;width:18%; margin-right:5px; text-align:right;}
 #notes{margin:10px; width:97%; height:100px; padding:10px; border:1px solid #eeeeee;}
-.invoice #item-totals{width:100%;border-radius:3px; background-color:#86ccf5; font-size:14px; padding-bottom:3px; margin-top:10px; border:1px solid #2979ca}
-.total_image_body .invoice #item-totals th, .invoice #item-totals td{text-align:center;   border: 1px solid #0269b1;}
+.invoice #item-totals{width:100%;border-radius:3px; background-color:rgba(232, 62, 1, 0.34); font-size:14px; padding-bottom:3px; margin-top:10px; border:1px solid #2979ca}
+.total_image_body .invoice #item-totals th, .invoice #item-totals td{text-align:center;   border: 1px solid #E83E01;}
 .invoice #item-totals th input, .invoice #item-totals td input { width: 85%;height: 20px;border-radius: 5px;border:none; background:none;}
 #theadline th{border-bottom: 1px solid #FFF;margin: 0px auto;clear: both;}
 .btn-info{background-image: linear-gradient(#7BBDF7, #3399F3 50%, #208FF2);background-repeat: no-repeat;filter: none;border: 1px solid #0E80E5;color: #FFF;
-background-color: #3399F3;}
+background-color: #E83E01;}
 .btn{text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);display: inline-block;margin-bottom: 0px;font-weight: normal;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 8px 12px;font-size: 14px;line-height: 1.42857;border-radius: 4px;-moz-user-select: none;}
 .glyphicon-plus:before{content:"\2b"; font-size:24px; font-weight:bold;}
 .defaultBoxLine table td, .defaultBoxLine table th { text-align:center; font-size:13px;}

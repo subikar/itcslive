@@ -147,7 +147,8 @@
 												jsscript=".$db->quote($jsscript).", 
 												gallery_id=".$db->quote($post["gallery_id"]).",
 												modified=".$db->quote($post['modified']).",
-												pageclass=".$db->quote($post['pageclass'])."
+												pageclass=".$db->quote($post['pageclass']).",
+												isfullpage=".$db->quote($post['isfullpage'])."
 												WHERE id=".$db->quote($post['page_id']);
 					$db->setQuery($Query);
 					//print_r($Query); exit;

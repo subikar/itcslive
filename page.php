@@ -15,7 +15,10 @@
 	 
 	  $template->assignRef('Content',$Content);
 		  
-		  $template->display('header');
-		  $template->display('body');
-		  $template->display('footer');
+	  $template->display('header');
+	  if($Content->isfullpage)
+	     $template->display('bodyfull');
+      else
+	    $template->display('body');
+	  $template->display('footer');
 ?>
