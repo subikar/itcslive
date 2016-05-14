@@ -24,12 +24,6 @@ var getfreequote = new function()
 			jQuery("#error_phonenunber").show();
 			return false;
 		}
-		else if(input.city.value=="")
-		{
-			input.city.focus();
-			jQuery("#error_city").show();
-			return false;
-		}
 		else
 		{
 			jQuery("#captcha_error").html("");
@@ -43,7 +37,7 @@ var getfreequote = new function()
 				}
 				else
 				{
-					jQuery("#captcha_error").html(result["message"]);
+					jQuery("#captcha_error").html('<= Sorry! You Enter Wrong Captcha.');
 					getfreequote.refreshCaptcha();
 				}
 			});
