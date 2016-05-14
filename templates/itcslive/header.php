@@ -35,50 +35,27 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 <head>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 <meta name="google-site-verification" content="GDb4S15UpTrnLAeNr_7IJy3w7Ah5PLhMc1zzJzg6m8Q" />
-
 <meta name='verify-v1' content='dbf4e7b7ebca3ecc5f01a3cdf36e2de2'/>
-
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-
 <META http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-
-<meta name = "format-detection" content = "telephone=no" />
-
 <title><?php echo isset($this->Title)?$this->Title.' | iTCSLive':'iTCSLive'; ?></title>
-
 <meta property="og:image" content="<?php echo $this->site; ?>templates/itcslive/css/images/logo.png" />
-
 <meta property="og:title" content="<?php echo isset($this->Title)?$this->Title:''; ?>" />
-
 <meta property="og:type" content="article"/>
-
 <meta property="og:url" content="<?php echo $this->SCRIPT_URI; ?>" />
-
 <meta property="og:description"  content="<?php echo isset($this->Description)?$this->Description:''; ?>" />
-
 <meta property="og:site_name" content="iTCSLive" />
-
 <meta property="fb:admins" content="722407295"/>
-
 <meta name="Description" content="<?php echo isset($this->Description)?$this->Description:''; ?>">
-
 <meta name="Keywords" content="<?php echo isset($this->Keyword)?$this->Keyword:''; ?>">
-
-<link rel="icon" href="images/favicon.ico">
-
 <link rel="shortcut icon" href="<?php echo $this->site; ?>templates/itcslive/images/favicon.ico" />
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/reset.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/skeleton.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/superfish.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/style.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/light-blue.css">
-
-
-
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-
 <link rel=stylesheet type="text/css" media=all href="<?php echo $this->site; ?>templates/itcslive/js/colorbox/colorbox.css"/>
 <?php  if(isset($this->Content->isfullpage) && $this->Content->isfullpage == 1): ?>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
