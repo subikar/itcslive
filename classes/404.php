@@ -30,14 +30,7 @@
 
   global $template;
 
- // $content = $cache = $template->CheckCache();
-  $cache = "no";  
+ $content = $cache = $template->CheckCache();
   if($cache == 'no')
-
-    { 
-
       Get404Original();
-
-	} 
-
 ?>

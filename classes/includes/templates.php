@@ -118,16 +118,13 @@ defined ('ITCS') or die ("Go away.");
            }
 		 function CheckCache()
 		   {
-		     if($config->CacheEnable == false)
+/*		     if($config->CacheEnable == false)
 			   {
 			      return 'no';
-			   }
+			   }*/
 		     $server = IRequest::get('SERVER');
 			 $ScriptUri = $server['REQUEST_URI'];
 			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
-			 if(!is_dir(IPATH_ROOT.DS.'cache/html'))
-			   mkdir(IPATH_ROOT.DS.'cache/html');
-			 
              if(file_exists($filename))
 			   {
 					$handle = fopen($filename,'r'); 
@@ -141,9 +138,12 @@ defined ('ITCS') or die ("Go away.");
 		   }  
 		 function SetCache($content,$cache=1)
 		   {
-             global $config, $my;  
-		     if($this->cache == 1 && $config->CacheEnable == true && $my->id <= 0)
+             global $config, $my; 
+			 //print_r($config); exit; 
+		     if($this->cache == 1 && $my->uid <= 0)
 			   {
+				 if(!is_dir(IPATH_ROOT.DS.'cache/html'))
+				   mkdir(IPATH_ROOT.DS.'cache/html');			   
 				 $server = IRequest::get('SERVER');
 				 $ScriptUri = $server['REQUEST_URI'];
 				 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';
