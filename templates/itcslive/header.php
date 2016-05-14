@@ -70,8 +70,11 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 
 <link rel="shortcut icon" href="<?php echo $this->site; ?>templates/itcslive/images/favicon.ico" />
 
+<link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/dashboard.css">
+<link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/reset.css">
+<link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/skeleton.css">
+<link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/superfish.css">
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/style.css">
-
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/light-blue.css">
 
 

@@ -48,7 +48,7 @@ td, th{padding:6px;border:1px solid #ccc;text-align:left;}
 .myappointment .each_box_area span.k-autocomplete{width:100%;}
 .myappointment .each_box_area span.k-datepicker{width:100%;}
 
-#content .container_12 .box_area #form input[type="checkbox"]{width: 18px;position: relative;top: -20px;left: -10px;}
+#content .container_12 .box_area #form input[type="checkbox"]{width: 18px;position: relative;top: -20px;left: -10px;box-shadow: 0px 0px 0px;}
 
 
 
