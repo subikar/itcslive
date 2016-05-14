@@ -138,7 +138,7 @@ body{font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22px;co
 
 .bot-6{margin-bottom:4px;font-size:20px;font-weight:bold;color:#FFFFFF;}
 
-.right{padding-right:24px;}
+.right{float:right; padding-right:24px;}
 
 .right-1{margin-right:20px;border-radius:10px;}
 
@@ -1039,8 +1039,10 @@ ul.foot-quicklinks li i {color:#ef3d00; font-size:16px;}
     padding: 15px 0;
 
     width: 100%;*/
-
-	width:100%; background:#f5f5f5; padding:15px 0px; text-align:center;
+	width:100%; 
+	background:url("../images/foot-bg.jpg") 0 0 repeat-x #a32300;
+	padding:35px 0px;
+	text-align:center;
 
 }
 
@@ -1092,14 +1094,14 @@ ul.foot-quicklinks li i {color:#ef3d00; font-size:16px;}
 
 .mobile_contact a {
 
-    padding: 10px 13% !important;
+    padding: 15px 13% !important;
 
 }
 
 
 .mobile_contact ul {}
-.mobile_contact ul li {display:inline; width:100%; margin:0 2%; border:solid 2px blue;}
-.mobile_contact ul li a {background:#ef3d00;}
+.mobile_contact ul li {display:inline; width:100%; margin:0 2%;}
+.mobile_contact ul li a {background:#fff;}
 .mobile_contact ul li a i {color:#fff;}
 
 
