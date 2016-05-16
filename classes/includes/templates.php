@@ -122,6 +122,11 @@ defined ('ITCS') or die ("Go away.");
 			   {
 			      return 'no';
 			   }*/
+			 $post = IRequest::get('POST');
+			 if(count($post) > 1)
+			   {
+			     return 'no';
+			   }  
 		     $server = IRequest::get('SERVER');
 			 $ScriptUri = $server['REQUEST_URI'];
 			 $filename = IPATH_ROOT.DS.'cache/html/'.md5($ScriptUri).'.ini';

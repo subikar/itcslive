@@ -156,7 +156,7 @@ class User extends Master
 			$this->post = $postArray;
 			parent::bind('breaktime');
 			parent::save();
-			$this->sendAttendanceEmail($postArray['break_start'],'Break-In Time','B');
+			//$this->sendAttendanceEmail($postArray['break_start'],'Break-In Time','B');
 			echo "<script>window.location.href='".$Config->site.'breaktime'."'</script>";
 		else:
 			$hours = $minutes = $seconds = "00";
@@ -184,7 +184,7 @@ class User extends Master
             $SQL="UPDATE #__breaktime SET break_stop=".$db->quote($break_stop).", break_diff=".$db->quote($break_diff)." WHERE user_id=".$post["user_id"]." AND break_stop IS NULL";
             $db->setQuery($SQL);
 			
-			$this->sendAttendanceEmail($break_stop,'Break-Out Time','B');
+			//$this->sendAttendanceEmail($break_stop,'Break-Out Time','B');
             echo "<script>window.parent.location.href='".$Config->site.'dashboard'."'</script>";
             echo "<script>parent.jQuery.colorbox.close();</script>";
 		endif;
@@ -237,7 +237,7 @@ class User extends Master
 			$this->post = $postArray;
 			parent::bind('attendance');
 			parent::save();
-			$this->sendAttendanceEmail($postArray['attendance_in'],"Attendance-in Time",'A');
+			//$this->sendAttendanceEmail($postArray['attendance_in'],"Attendance-in Time",'A');
 		else:
 			$date = date('Y-m-d');
 			$date1=$date." 01:00:00";
@@ -245,7 +245,7 @@ class User extends Master
 			$timeZone=isset($post["attendance_time"]) ? $post["attendance_time"] : date('Y-m-d h:i:s');
 			$SQL="UPDATE #__attendance SET attendance_out=".$db->quote($timeZone)." WHERE user_id=".$post["user_id"]." AND (attendance_in BETWEEN ".$db->quote($date1)." AND ".$db->quote($date2).")";
 			$db->setQuery($SQL);
-			$this->sendAttendanceEmail($timeZone,"Attendance-Out Time");
+			//$this->sendAttendanceEmail($timeZone,"Attendance-Out Time");
 		endif;
 		
 		echo "<script>window.parent.location.href='".$Config->site.'dashboard'."'</script>";

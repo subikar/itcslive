@@ -51,10 +51,27 @@ error_reporting(0);
 					 $db->setQuery($Query);
 					$post["category"]=$db->getOne();
 				}	
-			//$this->sendmailToAdmin($post);
+			$this->sendmailToAdmin($post);
+			$this->sendmailToCustomer($post);
 		   $mainframe->redirect($Config->site.'thank-you');
 		   
 		   }
+		   function sendmailToCustomer($ArgumentsInArray)
+		  {
+				$mailer=new IMail;
+				ob_start();
+				include_once(IPATH_ROOT."/mail_inc/MailToCustomer.inc");
+				$message = ob_get_clean();
+				  
+				$message=str_replace('{CustomerName}',$ArgumentsInArray['name'],$message);
+				$mailer->To=$ArgumentsInArray['email'];
+				$mailer->From="info@itcslive.com";
+				$mailer->Subject="Thank You! Our representative will get back to you soon.";
+				$mailer->Message = $message;
+				//print_r($ArgumentsInArray); exit;
+				$mailer->send();
+		  } 
+		   
 		   function sendmailToAdmin($ArgumentsInArray)
 		  {
 				$mailer=new IMail;
