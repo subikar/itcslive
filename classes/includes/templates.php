@@ -41,7 +41,7 @@ defined ('ITCS') or die ("Go away.");
 		 function HeadCss ()
 		   {
 		      global $Config;
-		     // print_r($this->css); exit;
+		     //print_r($this->css); exit;
 		     foreach($this->css as $key => $css)
 			   {
 			     if($this->css[$key]['priority'] == '')

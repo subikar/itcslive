@@ -5,8 +5,8 @@ $template->includecss("templates/itcslive/css/form.css",2,0);
 $template->includejs("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js",1,0);
 if($my->uid >0)
  {
-	$template->includecss($this->site."templates/itcslive/js/colorbox/colorbox.css",3,0);
-	$template->includecss($this->site."templates/itcslive/js/auto_jqueryui/kendo.common.min.css");
+	$template->includecss("templates/itcslive/js/colorbox/colorbox.css",3,0);
+	$template->includecss("templates/itcslive/js/auto_jqueryui/kendo.common.min.css");
 	$template->includejs($this->site."templates/itcslive/js/colorbox/jquery.colorbox.js",2,0);
 	$template->includejs($this->site."templates/itcslive/js/auto_jqueryui/kendo.all.min.js",3,0);
 	$template->includejs($this->site."classes/external/editor/tinymce.min.js",4,0);
