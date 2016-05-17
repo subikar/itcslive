@@ -5,9 +5,9 @@
 		$mainframe->redirect($Config->site);
 	}
 	$task=IRequest::getVar('task');
-	$template->includejs($Config->site."classes/external/editor/editor.js");
-	$template->includecss($Config->site."templates/itcslive/css/project.css");
-	$template->includejs($Config->site."templates/itcslive/js/project.js");
+	$template->includejs("classes/external/editor/editor.js");
+	$template->includecss("templates/itcslive/css/project.css");
+	$template->includejs("templates/itcslive/js/project.js");
 	switch($task)
 	{
 		case "addcompany":

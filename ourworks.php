@@ -1,7 +1,7 @@
 <?php defined ('ITCS') or die ("Go away.");
 	global $template,$Config,$mainframe;
 	$task=IRequest::getVar('task');
-	$template->includejs($Config->site."templates/itcslive/js/wow.js");
+	$template->includejs("templates/itcslive/js/wow.js");
 	//$template->includecss($Config->site."templates/itcslive/css/ourworks.css");
 	switch($task)
 	{

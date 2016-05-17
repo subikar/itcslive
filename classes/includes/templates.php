@@ -4,7 +4,7 @@ defined ('ITCS') or die ("Go away.");
          
 		 var $TemplatePath = NULL;
 		 var $Js = array();
-		 var $css = '';
+		 var $css = array();
 		 var $MinifyJS = array();
 		 var $priority = 0;
 		 var $csspriority = 0;
@@ -28,11 +28,66 @@ defined ('ITCS') or die ("Go away.");
 								 
 			 	
 		   }  
-		 function includecss($csspath)
+		 function includecss($csspath,$priority = '',$minify=0)
 		   {
-		      $this->css .= '<link rel="stylesheet" href="'.$csspath.'" type="text/css" />
-			        ';
+		      $this->css[] = array(
+			                      'text'=>'<link rel="stylesheet" href="'.$csspath.'" type="text/css" />
+								  ',
+					              'priority'=>$priority,
+								  'url'=>$csspath,
+								  'minify'=>$minify
+					             );
 		   } 
+		 function HeadCss ()
+		   {
+		      global $Config;
+		     // print_r($this->css); exit;
+		     foreach($this->css as $key => $css)
+			   {
+			     if($this->css[$key]['priority'] == '')
+				   {
+				     $this->priority = $this->priority + 1;
+				     $this->css[$key]['priority'] = $this->priority; 
+				   } 	 
+			   }
+			 $Newcss = $this->sksort($this->css,'priority',SORT_DESC); 
+			//print_r($Config); exit; 
+             if($Config->EnableCssCompression == true)
+			   {  
+					 
+					 $CacheCssFile = 'cache/css'.DS.md5(json_encode($Newcss)).'.css';
+					 if(!is_dir(IPATH_ROOT.DS.'cache/css'))
+					   mkdir(IPATH_ROOT.DS.'cache/css');
+					   
+					 if(!file_exists(IPATH_ROOT.DS.$CacheCssFile))
+					   {
+							 $content = '';
+							 $fp = fopen(IPATH_ROOT.DS.$CacheCssFile, 'w') or die("Unable to open file!");
+							 foreach($Newcss as $css)
+							   {
+								    $handle = fopen(IPATH_ROOT.DS.$css['url'],'r'); 
+									$content = fread($handle, filesize(IPATH_ROOT.DS.$css['url']));
+									$content = str_replace('../images',$Config->siteTemplate.'images',$content);
+									$content = str_replace('fonts',$Config->siteTemplate.'css/fonts/',$content);
+									//$content = str_replace('../images',$config->siteTemplate.'images/',$content);
+									fclose($handle);
+									fwrite($fp, PHP_EOL);
+									fwrite($fp, $content);
+							   }
+							  fclose($fp);	 
+							 //print(IPATH_ROOT.DS.$CacheJSFile);   
+							 //fwrite(IPATH_ROOT.DS.$CacheJSFile, $content,'W');  
+						 }	
+						echo '<link rel="stylesheet" href="'.$Config->site.$CacheCssFile.'" type="text/css" />';	    
+				}
+			else
+			  {
+			              //print_r($Newcss); exit;
+							 foreach($Newcss as $css)
+								echo $css['text'];
+			  }			
+		   }
+		   
 		 function HeadJs ()
 		   {
 		      global $Config;
@@ -122,6 +177,7 @@ defined ('ITCS') or die ("Go away.");
 			   {
 			      return 'no';
 			   }*/
+                          return 'no';
 			 $post = IRequest::get('POST');
 			 if(count($post) > 1)
 			   {

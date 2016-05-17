@@ -109,36 +109,16 @@ $accessPage_id = array("4","26","33","34","36","37","38","21","22","87"); ?>
         <div class="grid_4">
 
 
-
-           <div class="block-1" id="block-1">
-
-
-
-               <a target="_blank" href="http://www.mipalace.com"><img src="<?php echo $this->site; ?>templates/itcslive/images/mipalace.png" alt=""></a>
+				<a target="_blank" href="http://www.mipalace.com">
+           <div class="block-1 mipalaceicon" id="block-1">
 
 
 
-           </div>
+               <!--<a target="_blank" href="http://www.mipalace.com"><img src="<?php echo $this->site; ?>templates/itcslive/images/mipalace.png" alt=""></a>-->
 
 
 
-        </div>
-
-
-
-        <div class="grid_4">
-
-
-
-           <div class="block-1">
-
-
-
-               <a target="_blank" href="http://www.9newz.com"><img src="<?php echo $this->site; ?>templates/itcslive/images/9newz.png" alt=""></a>
-
-
-
-           </div>
+           </div></a>
 
 
 
@@ -149,16 +129,36 @@ $accessPage_id = array("4","26","33","34","36","37","38","21","22","87"); ?>
         <div class="grid_4">
 
 
-
-           <div class="block-1">
-
-
-
-               <a target="_blank" href="http://www.inclusive.co.in"><img src="<?php echo $this->site; ?>templates/itcslive/images/inclusive.png" alt=""></a>
+			<a target="_blank" href="http://www.9newz.com">
+           <div class="block-1 portalicon">
 
 
 
-           </div>
+               <!--<a target="_blank" href="http://www.9newz.com"><img src="<?php echo $this->site; ?>templates/itcslive/images/9newz.png" alt=""></a>-->
+
+
+
+           </div></a>
+
+
+
+        </div>
+
+
+
+        <div class="grid_4">
+
+
+<a target="_blank" href="http://www.inclusive.co.in">
+           <div class="block-1 liveicon">
+
+
+
+               <!--<a target="_blank" href="http://www.inclusive.co.in"><img src="<?php echo $this->site; ?>templates/itcslive/images/inclusive.png" alt=""></a>-->
+
+
+
+           </div></a>
 
 
 

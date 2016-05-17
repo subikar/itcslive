@@ -1,11 +1,11 @@
 <?php defined ('ITCS') or die ("Go away.");
 global $Config,$my,$template;
-$template->includecss($this->site."templates/itcslive/css/style-min.css");
-$template->includecss($this->site."templates/itcslive/css/form.css");
+$template->includecss("templates/itcslive/css/style-min.css",1,0);
+$template->includecss("templates/itcslive/css/form.css",2,0);
 $template->includejs("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js",1,0);
 if($my->uid >0)
  {
-	$template->includecss($this->site."templates/itcslive/js/colorbox/colorbox.css");
+	$template->includecss($this->site."templates/itcslive/js/colorbox/colorbox.css",3,0);
 	$template->includecss($this->site."templates/itcslive/js/auto_jqueryui/kendo.common.min.css");
 	$template->includejs($this->site."templates/itcslive/js/colorbox/jquery.colorbox.js",2,0);
 	$template->includejs($this->site."templates/itcslive/js/auto_jqueryui/kendo.all.min.js",3,0);
@@ -16,7 +16,7 @@ if($my->uid >0)
 <html>
 <head>
 <title><?php echo isset($this->Title)?$this->Title:''; ?></title>
-<?php echo $template->HeadJs(); ?>
-<?php echo $template->css; ?>
+<?php $template->HeadCss(); ?>
+<?php $template->HeadJs(); ?>
 </head>
 <body>
