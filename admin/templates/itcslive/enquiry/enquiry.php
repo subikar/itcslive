@@ -17,7 +17,8 @@
 			<div class="panel-heading">
 				<h4>Enquiry Manager</h4>
 				<h4><input type="button" name="Delete" value="delete" onclick="Enquery.multipleDelete('EnqueryFrm')" /></h4>
-			</div>      
+			</div>    
+			<br clear="all" />  
 			<div class="table-responsive">
                   <table class="table" style="margin-bottom: 0px;">
                     <thead>
@@ -39,7 +40,9 @@
                         <td><input type="checkbox" class="chk_boxes1" name="to_select[<?php echo $ticket->id; ?>]" value="<?php echo $ticket->id; ?>" /></td>
 						<td><?php  echo $ticket->id; ?></td>
 						<td><?php echo $ticket->form_data['name']; ?></td>
-                         <td><?php echo $ticket->form_data['email']; ?></td>						
+                         <td><?php echo $ticket->form_data['email']; ?><br />
+						 <?php echo $ticket->form_data['phone']; ?>
+						 </td>						
                         <td><?php
 								$position = strpos($ticket->form_data['message'],". ",130);
 								if((int)$position > 0 && (int)$position < 200):
