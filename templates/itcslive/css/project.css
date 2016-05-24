@@ -774,7 +774,7 @@ completetaskdiv a {padding-bottom:10px;}
 
 .completetaskdiv .k-select{right:0px;}
 
-.completetaskdiv .calfont{font-size:19px;/* padding:3px;*/}
+.completetaskdiv .calfont{font-size:19px;}
 
 .prev_next_btns input { color: #FFF;background-color: #ff4400;border: 1px solid #ff4400;font-size: 15px; border-top-left-radius:3px; border-bottom-left-radius:3px;}
 
@@ -784,13 +784,13 @@ completetaskdiv a {padding-bottom:10px;}
 
 /*modified css 20/10/2014*/
 
-.article-body h5.title_1 {background:#FFF /*linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(213, 213, 213, 0.34) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)*/; margin:0 0 7px 0px; padding:8px 0 8px 5px; border-bottom:1px solid #FFF; color:#ff5818; font-size:17px; text-transform:uppercase;border-bottom: 1px #ff5818;/*box-shadow: 0px 1px 1px #ff5818;*/}
+.article-body h5.title_1 {background:#FFF; margin:0 0 7px 0px; padding:8px 0 8px 5px; border-bottom:1px solid #FFF; color:#ff5818; font-size:17px; text-transform:uppercase;border-bottom: 1px #ff5818;}
 
 .color1 {background:#FFF;}
 
 .defaultBoxLine ul li span a {padding:0; text-transform:uppercase;}
 
-.menu-our-services-container {/*--background: rgba(255,255,255,1);background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(213,213,213,1)));background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5d5d5', GradientType=0 ); border:1px solid #b0b0b0b;margin:5px 4px; border-radius:5px;--*/background: #e83e01;}
+.menu-our-services-container {background: #e83e01;}
 
 .completetaskdiv input[type=select] {height:20px !important}
 
@@ -802,7 +802,7 @@ a.attachment {color:#fff}
 
 
 
-#content #projects .padDiv .defaultBoxLine3 .small_div1{width:auto;height:31px;}
+#content #projects .padDiv .defaultBoxLine3 .small_div1{width:150px; height:31px;}
 
 #taskcontent .padDiv .defaultBoxLine3 .small_div1 .k-header .k-state-default{width:104px;}
 
@@ -1095,10 +1095,33 @@ a.fc-more {color:#ff4400 !important;}
 #right_area_sidebar .assign ul li {float:left;}
 .nofloat {float:none !important;}
 
-.boiteHeader {height:34px !important;}
+#right_area_sidebar .article-body .boiteHeader {height:35px !important;}
 
+#contactus .order_nowform .table_edituser ul li input.wpcf7-form-control {width:100%;}
+
+
+.table_edituser .k-picker-wrap .k-input, .table_edituser .k-numeric-wrap .k-input, .table_edituser .k-dropdown-wrap .k-input, .table_edituser .k-selectbox .k-input {color:#000 !important;}
+
+
+.order_nowform .table_edituser ul li input {width:100%; padding:3px;}
+.k-picker-wrap .k-select, .k-numeric-wrap .k-select, .k-dropdown-wrap .k-select {line-height:2.5em !important}
+
+.defaultBoxLine3 a.tip:hover:after {color:#fff !important;}
+
+.description_add h4 {background:#e83e01; color:#fff; font-weight:normal; padding:7px;}
+.description_add .table_edituser {background:#ededed; padding:10px; height:123px;}
+.description_add .table_edituser ul li:nth-of-type(2n+1) {width:39%;}
+.article-body .order_nowform h3 {background:#e83e01; color:#fff; font-weight:normal; padding:7px;}
+
+.table_edituser ul li input {width:98% !important; padding:4px !important;}
+
+/*.article-body .wpcf7 .table_edituser ul li span textarea {width:100% !important; background:red;}*/
 
 /* RESPONSIVE */
+
+@media only screen and (max-width:1241px) {
+	#right_area_sidebar .article-body .boiteHeader {height:85px !important}
+}
 
 @media only screen and (max-width:1100px){#taskcontent .padDiv.row5.box_1 {width: 78%;}}
 
@@ -1118,11 +1141,17 @@ a.fc-more {color:#ff4400 !important;}
 }
 
 
+@media only screen and (min-width:768px) and (max-width:995px){
+#right_area_sidebar h4 {margin-bottom:20px !important;}
+.project_page #right_area_sidebar .attendencediv .k-combobox {width:137px;}
+}
+
+
 @media only screen and (max-width:767px) {
 #content .div-main .pagemobile .img_bdr{width:50px !important;}
 #right_area_sidebar #taskcontent .padDiv.row5.box_1 {width:98% !important; margin-top:15px;}
 #taskcontent .boiteHeader {height:65px !important;}
-.boiteHeader {height:130px!important;}
+.boiteHeader {height:30px!important;}
 .boiteHeader ol {margin-top:10px !important;}
 .boiteHeader h5 {padding:0 0 0 20px !important;}
 .completetaskdiv {background-color:#ff4400 !important;}
@@ -1134,6 +1163,12 @@ a.fc-more {color:#ff4400 !important;}
 .defaultBoxLine ul.no_margin li {padding-top:6px; padding-bottom:6px;}
 .k-picker-wrap .k-select, .k-numeric-wrap .k-select, .k-dropdown-wrap .k-select {line-height:28px !important;}
 .widget_pages #search input, #myproject input {width:180px !important;}
+
+.project_page #right_area_sidebar .fa-left {float:none;}
+.project_page #right_area_sidebar .fa-right {float:none;}
+.project_page #right_area_sidebar .attendencediv .k-combobox {display:block; width:97%; margin-top:5px; margin-bottom:5px;}
+
+
 }
 
 
@@ -1151,7 +1186,9 @@ a.fc-more {color:#ff4400 !important;}
 
 .small_div1{width:252px;}
 
-.small_div{width:252px;}
+.small_div{width:252px; padding-right:0px;}
+
+#content #projects .padDiv .defaultBoxLine3 .small_div1 {width:auto;}
 
 }
 

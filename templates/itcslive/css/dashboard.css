@@ -58,7 +58,7 @@
 
 .fa-user-1:before{content:"\f007";font-size:20px;color:#fff;margin:0 0 0 3px;}
 
-.box_area .each_box_area{width:24%;float:left;margin:5px;}
+.box_area .each_box_area{width:24%;float:left;margin:5px; border:solid 1px #ccc}
 
 .defaultBoxLine table thead{background-color:#4EB6F3;}
 
@@ -105,11 +105,17 @@ td, th{padding:6px;border:1px solid #ccc;text-align:left;}
 #content .container_12 #primary .article-body .fa-truck:before{color:#E83E01}
 
 
+.each_box_area .k-dropdown-wrap .k-select {top:0px;}
+.each_box_area .k-picker-wrap .k-select {top:3px; right:3px;}
 
 
 
 
 
+@media only screen and (max-width:767px) { 
+.box_area {margin-bottom:10px;}
+.box_area .each_box_area {float:none; width:97%;}
+}
 
 
 
