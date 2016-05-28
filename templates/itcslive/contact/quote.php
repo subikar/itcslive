@@ -5,7 +5,7 @@
 
 				<label class="control-label" for="name">Name *:</label>
 
-				<input name="name" id="name" title="Name" value="" class="required-entry validate_me span12" type="text" placeholder="Name">
+				<input name="name" id="name" title="Name" value="" class="required-entry validate_me span12" type="text" placeholder="Enter Name">
 
 				<span style="display: none;" class="error error-empty error_tag">*This is not a valid name.</span>
 
@@ -19,7 +19,7 @@
 
 				 <label class="control-label" for="email">Email*:</label>
 
-				 <input name="email" id="email" title="Email" value="" class="input-xlarge required-entry validate-email validate_me span12" type="text" placeholder="Email">
+				 <input name="email" id="email" title="Email" value="" class="input-xlarge required-entry validate-email validate_me span12" type="email" placeholder="Enter Email">
 
 				<span style="display: none;" class="error error-empty error_tag">*This is not a valid email address.</span>
 
@@ -34,7 +34,7 @@
 				<label class="control-label quote-phone-no" for="phone">Phone No*:</label>
 				<div class="clear"></div>
 				<input type="text" maxlength="3" value="+91" class="validate_me span2" id="pop_phone_code-16543" name="phonecode">
-				<input type="tel" name="phone" class="required-entry validate-custommobile validate_me span10 field-call" id="phone" title="Telephone" value="" maxlength="10" placeholder="Phone No">
+				<input type="tel" name="phone" class="required-entry validate-custommobile validate_me span10 field-call" id="phone" title="Telephone" value="" maxlength="10" placeholder="Enter Phone No">
 				<span style="display: none;" class="error error-empty error_tag">*This is not a valid phone number.</span>
 				<span style="display: none;" id="error_phone" class="empty error-empty error_tag">*This field is required.</span> </label>
 				<i class="icon-phone-2"></i>
