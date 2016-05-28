@@ -1,7 +1,7 @@
 <?php defined ('ITCS') or die ("Go away.");
 global $template;
 $template->includecss("templates/itcslive/css/quick-quote.css");
-$template->includejs($Config->site."templates/itcslive/js/getfreequote.js");
+$template->includejs("templates/itcslive/js/getfreequote.js");
 /*  if(IRequest::getVar('task') == 'logout')
     {
 	  $model = includeclass('login');

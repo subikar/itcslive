@@ -67,6 +67,15 @@
 			$uid = $db->getOne();
 			print_r(json_encode($uid)); exit;
 		}
+	  function SKey()
+	    {
+		  $post = IRequest::get('POST');
+		  $formname = md5(time().$post['formname']);
+		  IRequest::get('POST');
+		  IRequest::setVar($post['formname'],$formname,'SESSION');
+		  echo $formname;
+		  
+		}	
 		
   	}
 ?>

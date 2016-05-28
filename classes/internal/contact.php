@@ -24,15 +24,18 @@ error_reporting(0);
 		   {
 		   		global $db,$template,$mainframe,$Config;
 		   		$post=IRequest::get("POST");
-				//print_r($post); exit;
-/*			if($post["captcha_code"]!=$_SESSION["captcha_code"])
-			{
-			    echo "Sorry Captcha Error";
-				exit;
-			}
-*/				unset($post["task"]);
+				$session = IRequest::get("SESSION");
+				if($post["formkey"]!=$session[$post['form']])
+					{
+						 $mainframe->redirect($Config->site.'error-thank-you');
+					}
+   			    unset($post["formkey"]);
+				 unset($post["text_num"]);
+				unset($post["form"]);
+				unset($post["task"]);
 				unset($post["view"]);
-				unset($post["captcha_code"]);
+				unset($post["view"]);
+				unset($post["timeframe"]);
 				
 			 $PostArgumentsInArray = array (
 			                              'form_data'=>json_encode($post),
@@ -48,6 +51,7 @@ error_reporting(0);
 			if((int)$post["category"] > 0)
 				{
 					 $Query = "select category_name from #__category Where type='ticket' AND id=".$db->quote($post["category"]);
+						//echo $Query;exit;
 					 $db->setQuery($Query);
 					$post["category"]=$db->getOne();
 				}	
@@ -87,9 +91,10 @@ error_reporting(0);
 				  
 				$message=str_replace('{admin_name}',"Admin",$message);
 				$message=str_replace('{details}',$BodyContent,$message);
-				
-				$mailer->To="subikar.web@gmail.com";
-				$mailer->From="info@itcslive.com";
+				//print($message); exit;
+				$toemail = array('subikar.web@gmail.com','pradip3@itcslive','romila@itcslive.com');
+				$mailer->To=implode(',',$toemail);
+				$mailer->From="kolkata@itcslive.com";
 				$mailer->Subject="New Enquiry from iTCSLive Enquiry Details";
 				$mailer->Message = $message;
 				$mailer->send();

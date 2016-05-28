@@ -36,6 +36,7 @@
 			 } 
 	      $SetQuery = ' SET '.implode(',',$SetQuery);   
 		  $Query  = 'INSERT into '.$this->table.$SetQuery;
+		  //echo $Query;exit;
 		  $db->setQuery($Query);
 	   }  
 	 function update()

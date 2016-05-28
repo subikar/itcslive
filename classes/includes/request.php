@@ -615,6 +615,11 @@ class IRequest
 				$_FILES[$name] = $value;
 
 				break;
+			case 'SESSION' :
+
+				$_SESSION[$name] = $value;
+
+				break;
 
 			case 'ENV'    :
 
@@ -741,6 +746,11 @@ class IRequest
 			case 'COOKIE' :
 
 				$input = $_COOKIE;
+
+				break;
+			case 'SESSION' :
+
+				$input = $_SESSION;
 
 				break;
 

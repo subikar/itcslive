@@ -67,6 +67,7 @@ defined ('ITCS') or die ("Go away.");
 							   {
 								    $handle = fopen(IPATH_ROOT.DS.$css['url'],'r'); 
 									$content = fread($handle, filesize(IPATH_ROOT.DS.$css['url']));
+									$content = str_replace('../../images',$Config->siteTemplate.'images',$content);
 									$content = str_replace('../images',$Config->siteTemplate.'images',$content);
 									$content = str_replace('fonts',$Config->siteTemplate.'css/fonts/',$content);
 									//$content = str_replace(' ','',$content);

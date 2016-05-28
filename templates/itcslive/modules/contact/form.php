@@ -1,7 +1,6 @@
 <?php defined ('ITCS') or die ("Go away."); 
 global $Config;
 ?>
-<link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/form.css">
 <div>
        <h3 class="bot-1 ptm">Quick Quote</h3>
             <div class="success_wrapper">
@@ -12,6 +11,12 @@ global $Config;
 		    <input type="hidden" name="view" value="contact" />
 			<input type="hidden" name="task" value="createticket" />
 			<input type="hidden" name="category" value="15" />
+			<input type="hidden" name="form" value="TicketContactForm" />
+			<script type="text/javascript">
+			  jQuery(document).ready(function(){
+				FreeQuote.addKey('TicketContactForm');
+				})
+			</script>			
             <label class="name">
             <input type="text" name="name"  placeholder="Enter Name" />
             <br class="clear">
@@ -31,14 +36,6 @@ global $Config;
             <textarea name="message" placeholder="Enter Message"></textarea>
             <br class="clear">
 			   <span class="error_tag" id="error_message" ></span></label>
-            <label class="captcha">				  
-			<input id="captcha_code" name="captcha_code" type="text" placeholder="Type Text ->" />
-				  <span class="captchaimage">
-                  <img src="<?php echo $Config->site ?>classes/external/captcha/captcha.php?rand=<?php echo rand();?>" id='captchaimg'>
-				  <a href='javascript: Ticket.refreshCaptcha();'><span class="fa fa-refresh"></span></a>
-				  </span>
-				  <br clear="all" />
-			      <span id="captcha_error"></span></label>
             <div class="clear"></div>
             <label class="message">
             I understand and agree to the rules and restrictions and the <a href="/term-and-condition" target="_blank">Terms & Conditions</a> of iTCSLive.

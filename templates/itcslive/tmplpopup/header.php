@@ -1,7 +1,9 @@
 <?php defined ('ITCS') or die ("Go away.");
 global $Config,$my,$template;
-$template->includecss("templates/itcslive/css/style-min.css",1,0);
-$template->includecss("templates/itcslive/css/form.css",2,0);
+$template->includecss("templates/itcslive/css/reset.css",1,0);
+$template->includecss("templates/itcslive/css/skeleton.css",2,0);
+$template->includecss("templates/itcslive/css/style-min.css",3,0);
+$template->includecss("templates/itcslive/css/form.css",4,0);
 $template->includejs("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js",1,0);
 if($my->uid >0)
  {

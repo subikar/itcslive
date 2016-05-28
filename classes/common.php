@@ -123,10 +123,16 @@
 				}  
 			 $is_home = ($ScriptUri == 'home')?1:0; 	  
 			 $template->assignRef('is_home',$is_home);
-			 if($ScriptUri == 'home')	  
-				include_once($File);
+			 $view = IRequest::getVar('view','');
+			 if($view != '')
+			   includeclass($view);
 			 else
-				include_once('../'.$File);
+			  {
+				 if($ScriptUri == 'home')	  
+					include_once($File);
+				 else
+					include_once('../'.$File);
+			   }	
 	  }
 	 else
 	  {

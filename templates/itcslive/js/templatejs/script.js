@@ -1,26 +1,7 @@
-$(document).ready(function(){var screenwidth=$(document).width();if(screenwidth<=320)jQuery(".get-free-quote").colorbox({iframe:true,width:"97%",height:"60%"});else
-jQuery(".get-free-quote").colorbox({iframe:true,width:"50%",height:"60%"});});
-var clicks = 0;
-jQuery(document).ready(function(){
- var screenwidth = jQuery(document).width();
- if(screenwidth <= 320)
- jQuery(".clientlogin").colorbox({iframe:true, width:"97%", height:"60%"});	 
- else
- jQuery(".clientlogin").colorbox({iframe:true, width:"40%", height:"60%"});	 
- 
- jQuery('.toggle-menu').jPushMenu();
- jQuery(".jPushMenuBtn").click(function(){
-					clicks = clicks+1;
-					if(clicks%2==0)
-				 	 jQuery('.toggle-menu').removeClass('tgclose');
-					else
-				 	 jQuery('.toggle-menu').addClass('tgclose');
-				}); 
- }); 
-var FreeQuote=new function()
+ var FreeQuote=new function()
 {
 	this.validateEnquery=function(input_id)
-	{
+	{	
 		var input=document.getElementById(input_id);
 		var phoneno = /^\d{10}$/;  
 		var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -41,6 +22,7 @@ var FreeQuote=new function()
 		else if(input.phone.value=="" || isNaN(input.phone.value) || !input.phone.value.match(phoneno))
 		{
 			input.phone.focus();
+			jQuery("#error_phone").html("Phone Invalid!").show();
 			jQuery("#error_phonenunber").show();
 			return false;
 		}
@@ -58,27 +40,50 @@ var FreeQuote=new function()
 		}
 		else
 		{
-			jQuery("#captcha_error").html("");
-			var formURL="contact?view=contact&task=varifyCaptcha";
-			jQuery.post(formURL,{ captcha:input.captcha_code.value},
-			function(data){
-				var result=JSON.parse(data);
-				if(parseInt(result["status"])==1)
-				{
-					input.submit();
-				}
-				else
-				{
-					jQuery("#captcha_error").html(result["message"]);
-					FreeQuote.refreshCaptcha();
-				}
-			});
+			input.submit();
 		}
 	}
-	this.refreshCaptcha=function(){
-	var img = document.images['captchaimg'];
-	img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
+
+
+	this.CheckLength = function(thisobj,textcounter) 
+	{
+      maxLen = 2000; // max number of characters allowed
+	if (thisobj.value.length >= maxLen) {
+		jQuery('.'+textcounter).val((maxLen - thisobj.value.length));
+		thisobj.value = thisobj.value.substring(0, maxLen);
+	 }
+	else{ 
+		jQuery('.'+textcounter).val((maxLen - thisobj.value.length));
 	}
+	}
+	this.addKey = function(formname)
+	  {
+		jQuery.post( "generatekey", {formname: formname}, 
+		function( data ) 
+		{
+			jQuery("#"+formname).append("<input type='hidden' name='formkey' value='"+data+"'>");
+		});
 
-
+	  }
 }
+$(document).ready(function(){
+   var screenwidth=$(document).width();
+		if(screenwidth<=800)jQuery(".get-free-quote").colorbox({iframe:true,width:"90%",height:"75%"});else
+jQuery(".get-free-quote").colorbox({iframe:true,width:"50%",height:"60%"});});
+var clicks = 0;
+jQuery(document).ready(function(){
+ var screenwidth = jQuery(document).width();
+ if(screenwidth <= 600)
+ jQuery(".clientlogin").colorbox({iframe:true, width:"90%", height:"75%"});	 
+ else
+ jQuery(".clientlogin").colorbox({iframe:true, width:"40%", height:"60%"});	 
+ 
+ jQuery('.toggle-menu').jPushMenu();
+ jQuery(".jPushMenuBtn").click(function(){
+					clicks = clicks+1;
+					if(clicks%2==0)
+				 	 jQuery('.toggle-menu').removeClass('tgclose');
+					else
+				 	 jQuery('.toggle-menu').addClass('tgclose');
+				}); 
+ }); 
