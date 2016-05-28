@@ -1,40 +1,25 @@
-<?php defined ('ITCS') or die ("Go away."); 
-
-global $Config;
-
-?>
-
+<?php defined ('ITCS') or die ("Go away.");
+global $Config; ?>
 <script  src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.carouFredSel-6.1.0-packed.js"></script>
-
-     <script  src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.touchSwipe.min.js"></script> 
-
-     <script>
-
-	 $(window).load (
-
-			function(){$('#carousel1').carouFredSel({auto: false, prev: '#prev',next: '#next', width: 220, items: {
-
-			  visible : {min: 1,
-
-			   max: 4
-
-		},
-
-		height: 'auto',
-
-		 width: 220,
-
-		}, responsive: true, 
-
-		scroll: 1, 
-
-		mousewheel: false,
-
-		swipe: {onMouse: true, onTouch: true}});
-
+<script  src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.touchSwipe.min.js"></script> 
+<script type="text/javascript">
+var screenwidth = $(document).width();
+var mwidth = 220;
+if(screenwidth <= 320)
+  mwidth = 310;
+ $(window).load (
+	function(){$('#carousel1').carouFredSel({auto: false, prev: '#prev',next: '#next', width: mwidth, items: {
+	  visible : {min: 1,
+	   max: 4
+	},
+	height: 'auto',
+    width: mwidth,
+	}, responsive: true, 
+	scroll: 1, 
+	mousewheel: false,
+	swipe: {onMouse: true, onTouch: true}});
     } ); 
-
-  </script>
+</script>
 
 <div class="wrapper">
 
