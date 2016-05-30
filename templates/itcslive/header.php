@@ -113,29 +113,14 @@ $template->includejs($this->site."templates/itcslive/js/templatejs/tinymce.min.j
 
 
 
-
-$template->includecss("templates/itcslive/css/reset.css",1,0);
-
-
-
-$template->includecss("templates/itcslive/css/skeleton.css",2,0);
-
-
-
-$template->includecss("templates/itcslive/css/superfish.css",3,0);
-
-
-
-$template->includecss("templates/itcslive/css/style.css",4,0);
-
-
-
-$template->includecss("templates/itcslive/css/light-blue.css",5,0);
-
-
-
+$template->includecss("templates/itcslive/css/light-blue.css",1,0);
+$template->includecss("templates/itcslive/css/reset.css",2,0);
+$template->includecss("templates/itcslive/css/skeleton.css",3,0);
+$template->includecss("templates/itcslive/css/superfish.css",4,0);
+$template->includecss("templates/itcslive/css/form.css",5,0);
 $template->includecss("templates/itcslive/js/colorbox/colorbox.css",6,0);
-$template->includecss("templates/itcslive/css/form.css",7,0);
+$template->includecss("templates/itcslive/css/style.css",7,0);
+
 
 ?>
 

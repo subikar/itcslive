@@ -124,7 +124,8 @@
 			 $is_home = ($ScriptUri == 'home')?1:0; 	  
 			 $template->assignRef('is_home',$is_home);
 			 $view = IRequest::getVar('view','');
-			 if($view != '')
+			// print_r($view); exit;
+			 if($view != '' && $view == 'login')
 			   includeclass($view);
 			 else
 			  {
