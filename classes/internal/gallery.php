@@ -51,16 +51,19 @@
 	   }
 	   function GetGalleryHTML($GalleryID,$Width,$Height,$Limit)
 	   {
-			global $db,$Config; 
+			global $db,$Config,$template; 
 			$html="";
 			$SQL="SELECT data FROM #__gallery WHERE gallery_id=".$db->quote($GalleryID);
 			$db->setQuery($SQL);
 			$Content = $db->getOne();
 			if($Content !='')
 			{
+			    $html = '<div id="gallery_area"><img src="'.$Config->site.'templates/itcslive/images/search_content-loader.gif" /></div>';
+				
 				ob_start();
 					include_once(IPATH_ROOT."/templates/itcslive/ImageSlider/classic/slideshow.php");
-				$html = ob_get_clean();
+				$template->customjs = ob_get_clean();
+				
 			}	
 			return $html;
 	   } 

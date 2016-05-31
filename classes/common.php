@@ -78,6 +78,7 @@
 	  $template->assignRef('SCRIPT_URI',$ScriptUri); 				  
 	  $view = IRequest::getVar('view','');
 	  SetSession();
+	 
 	  if($view == '')
 	    {
 			  $ScriptUri = str_replace($Config->site,'',$ScriptUri);
@@ -97,6 +98,7 @@
 			  $db->setQuery($query);
 			  $UrlData =  $db->loadObjectList();
 			  $UrlData =  isset($UrlData[0])?$UrlData[0]:'nopage';
+			// print_r($UrlData); exit;
 			  if($UrlData == 'nopage')
 			    {
 				  $ScriptUri = 'nopage';

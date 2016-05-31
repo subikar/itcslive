@@ -10,6 +10,7 @@ defined ('ITCS') or die ("Go away.");
 		 var $csspriority = 0;
 		 var $cache = 0;
 		 var $compress = 0;
+		 var $customjs = NULL;
 		 function __construct()
 		   {
 		      global $Config;
@@ -89,11 +90,32 @@ defined ('ITCS') or die ("Go away.");
 								echo $css['text'];
 			  }			
 		   }
+		 function CreateCustomeJS()
+		   {
 		   
+		     if($this->customjs != NULL)
+			   {
+					 $server = IRequest::get('SERVER');
+					 $ScriptUri = $server['REQUEST_URI'];
+					 $CacheJSFile = 'cache/js'.DS.md5($ScriptUri).'.js';
+					 if(!is_dir(IPATH_ROOT.DS.'cache/js'))
+					   mkdir(IPATH_ROOT.DS.'cache/js');
+					   
+					 if(!file_exists(IPATH_ROOT.DS.$CacheJSFile))
+					   {
+							 $fp = fopen(IPATH_ROOT.DS.$CacheJSFile, 'w') or die("Unable to open JS file!");
+							 fwrite($fp, $this->customjs);
+							 fclose($fp);
+							 
+		               } 
+					 $this->includejs($CacheJSFile);	   
+			   }
+		   }  
 		 function HeadJs ()
 		   {
 		      global $Config;
 		      //print($this->priority); exit;
+			 $this->CreateCustomeJS(); 
 		     foreach($this->Js as $key => $js)
 			   {
 			     if($this->Js[$key]['priority'] == '')
@@ -102,6 +124,7 @@ defined ('ITCS') or die ("Go away.");
 				     $this->Js[$key]['priority'] = $this->priority; 
 				   } 	 
 			   }
+			   
 			 $NewJs = $this->sksort($this->Js,'priority',SORT_DESC);  
              if($Config->EnableJsCompression == true)
 			   {  
