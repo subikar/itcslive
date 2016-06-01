@@ -35,11 +35,14 @@
 		{
 		   $Height=$matches["height"][0];
 		} 
-		if(isset($matches["limit"][0]))
+		if(!isset($matches["limit"][0]))
 		{
+			$pattern = '/\[nggallery.*[ ]+limit=(?P<limit>[0-9]+).*\]/u';
+			preg_match_all($pattern, $Content, $matches);
+		
 		   $Limit=$matches["limit"][0];
 		} 
-	
+	   // print_r($matches); exit;
 		if((int)$GalleryID > 0)
 		{
 			$html=	$this->GetGalleryHTML($GalleryID,$Width,$Height,$Limit);
@@ -49,7 +52,7 @@
 	     // Do your work and return
 		 return $Content; 
 	   }
-	   function GetGalleryHTML($GalleryID,$Width,$Height,$Limit)
+	   function GetGalleryHTML($GalleryID,$Width,$Height,$Limit = 3)
 	   {
 			global $db,$Config,$template; 
 			$html="";

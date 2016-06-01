@@ -220,7 +220,7 @@ error_reporting(0);
 			$paramsInArray=$params->getParams("invoice");
 			$post=IRequest::get("POST");
 			//print_r($post); exit;
-			$limit=((int)$post['limit'] > 0 ) ? (int)$post['limit'] : (((int)$paramsInArray["gallery_page_limit"] > 0) ? $paramsInArray["gallery_page_limit"] : 6);
+			$limit=((int)$post['limit'] > 0 ) ? (int)$post['limit'] : (((int)$paramsInArray["gallery_page_limit"] > 0) ? $paramsInArray["gallery_page_limit"] : 3);
 			//$limit=12;
 		   $basePath=$Config->site; $status=0; $htm=""; $fullGallery=array();
      	    include_once(IPATH_ROOT."/classes/external/priyaTools/resizer.php");
