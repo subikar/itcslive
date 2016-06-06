@@ -27,14 +27,20 @@
 		{
 		   $GalleryID=$matches["id"][0];
 		} 
-		if(isset($matches["width"][0]))
-		{
+		//if(isset($matches["width"][0]))
+		//{
+			$pattern = '/\[nggallery.*[ ]+width=(?P<width>[0-9]+).*\]/u';
+			preg_match_all($pattern, $Content, $matches);
 		   $Width=$matches["width"][0];
-		} 
-		if(isset($matches["height"][0]))
-		{
+		//} 
+		// print_r($matches); exit;
+		//if(isset($matches["height"][0]))
+	//	{
+			$pattern = '/\[nggallery.*[ ]+height=(?P<height>[0-9]+).*\]/u';
+			preg_match_all($pattern, $Content, $matches);
 		   $Height=$matches["height"][0];
-		} 
+		//} 
+		//print_r($matches); exit;
 		if(!isset($matches["limit"][0]))
 		{
 			$pattern = '/\[nggallery.*[ ]+limit=(?P<limit>[0-9]+).*\]/u';
@@ -42,7 +48,7 @@
 		
 		   $Limit=$matches["limit"][0];
 		} 
-	   // print_r($matches); exit;
+	   
 		if((int)$GalleryID > 0)
 		{
 			$html=	$this->GetGalleryHTML($GalleryID,$Width,$Height,$Limit);
@@ -52,7 +58,7 @@
 	     // Do your work and return
 		 return $Content; 
 	   }
-	   function GetGalleryHTML($GalleryID,$Width,$Height,$Limit = 3)
+	   function GetGalleryHTML($GalleryID,$Width,$Height,$Limit)
 	   {
 			global $db,$Config,$template; 
 			$html="";

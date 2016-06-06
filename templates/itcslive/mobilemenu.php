@@ -22,7 +22,7 @@
     </div>
 	
 	<div class="clear"></div>
-	<div class="mobile-hedr-tagline">Build Your Dream Technology</div>
+	<div class="mobile-hedr-tagline">Information Technology Consultant Services</div>
 	
 	
   </div>

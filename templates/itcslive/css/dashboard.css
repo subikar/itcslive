@@ -108,8 +108,8 @@ td, th{padding:6px;border:1px solid #ccc;text-align:left;}
 .each_box_area .k-dropdown-wrap .k-select {top:0px;}
 .each_box_area .k-picker-wrap .k-select {top:3px; right:3px;}
 
-
-
+.ecommerce{text-align: left!important;margin-left: 40px;}
+.ecommerce .plan_blog_icon_ecommerce { width:66%;}
 
 
 @media only screen and (max-width:767px) { 

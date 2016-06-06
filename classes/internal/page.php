@@ -17,6 +17,7 @@ defined ('ITCS') or die ("Go away.");
 			  $Content->content = $this->AddModule($Content->content);
 			  $Content->content = $this->AddGallery($Content->content);
 			  $Content->content = $this->AddSitemap($Content->content);
+			  $Content->content = $this->AddYouTubeVideo($Content->content);
 			  return $Content;
 		   }
 		  function AddModule($Content)
@@ -38,6 +39,10 @@ defined ('ITCS') or die ("Go away.");
 			  $Content = $model->GetSitemapFromContent($Content);
 			  return $Content;
 		   }
+		 function AddYouTubeVideo($Content)
+		   {
+		     return $Content;
+		   }  
 		   	
   }
 ?>
