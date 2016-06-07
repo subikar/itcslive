@@ -41,6 +41,17 @@ defined ('ITCS') or die ("Go away.");
 		   }
 		 function AddYouTubeVideo($Content)
 		   {
+				$pattern = '/\[youtube.*[ ]+id=(?P<id>[0-9 A-Z a-z]+)[ ]+width=(?P<width>[0-9 A-Z a-z]+)[ ]+height=(?P<height>[0-9 A-Z a-z]+)[ ].*\]/u';
+				preg_match_all($pattern, $Content, $matches);
+				//print_r($matches);
+				if(isset($matches[id][0]) && $matches[id][0] != '')
+				  {
+				    $html = '<iframe  width="90%" height="'.$matches['height'][0].'" src="https://www.youtube.com/embed/'.$matches[id][0].'?autoplay=1&controls=0&iv_load_policy
+=3&rel=0&showinfo=0&modestbranding=1" frameborder="0" loop=1></iframe>';
+				    $Content = str_replace($matches[0][0], $html, $Content);
+				  }
+				//print_r($matches); exit;
+		   
 		     return $Content;
 		   }  
 		   	
