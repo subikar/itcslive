@@ -62,7 +62,7 @@ defined ('ITCS') or die ("Go away.");
 					   
 					 if(!file_exists(IPATH_ROOT.DS.$CacheCssFile))
 					   {
-							 $content = '';
+							 $content = NULL;
 							 $fp = fopen(IPATH_ROOT.DS.$CacheCssFile, 'w') or die("Unable to open file!");
 							 foreach($Newcss as $css)
 							   {

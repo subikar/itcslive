@@ -14,9 +14,9 @@
     </div>
     <div class="grid_8 mobile-menu-links">
       <ul class="links">
-        <li class="last"><a href="#"><i class="fa fa-fw fa-envelope"></i></a></li>
-        <li><a href="#"><i class="fa fa-fw fa-skype"></i></a></li>
-        <li><a href="#"><i class="fa fa-fw fa-user"></i></a></li>
+        <li class="last"><a href="mailto:info@itcslive.com"><i class="fa fa-fw fa-envelope"></i></a></li>
+        <li><a href="skype:itcslive"><i class="fa fa-fw fa-skype"></i></a></li>
+        <li><?php if(isset($my->uid)): ?><a class="logout" href="<?php echo $Config->site.'logout'; ?>" title="Client Logout"><i class="fa fa-fw fa-lock"></i></a><?php else:?><a class="clientlogin" href="<?php echo $Config->site.'login'; ?>" title="Client Login"><i class="fa fa-fw fa-user"></i></a><?php endif; ?></li>
         <li class="first phone"><a href="tel:+919836892283"><i class="fa fa-fw fa-phone"></i></a></li>
       </ul>
     </div>
@@ -69,10 +69,10 @@
 	  
 	  <div class="grid_12 lft-toggle-quick-links">
 	  	<ul class="foot-quicklinks">
-			<li><a href="tel:+919836892283"><i class="fa fa-fw fa-phone"></i></a></li>
-			<li><a href="#"><i class="fa fa-fw fa-user"></i></a></li> 
-			<li><a href="#"><i class="fa fa-fw fa-skype"></i></a></li>
-			<li><a href="#"><i class="fa fa-fw fa-envelope"></i></a></li>
+        <li><a href="mailto:info@itcslive.com"><i class="fa fa-fw fa-envelope"></i></a></li>
+        <li><a href="skype:itcslive"><i class="fa fa-fw fa-skype"></i></a></li>
+        <li><?php if(isset($my->uid)): ?><a class="logout" href="<?php echo $Config->site.'logout'; ?>" title="Client Logout"><i class="fa fa-fw fa-lock"></i></a><?php else:?><a class="clientlogin" href="<?php echo $Config->site.'login'; ?>" title="Client Login"><i class="fa fa-fw fa-user"></i></a><?php endif; ?></li>
+        <li class="first phone"><a href="tel:+919836892283"><i class="fa fa-fw fa-phone"></i></a></li>
 		</ul>		
 	  </div>
 	  
