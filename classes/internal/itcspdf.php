@@ -27,8 +27,10 @@ class Itcspdf extends Master
 	{
 		global $Config;
 		$id=IRequest::getInt('invoice_id');
-		 $filename=IPATH_ROOT.DS."images/download/invoice/invoice_".$id.".pdf";
-		 $url_file=$Config->site."images/download/invoice/invoice_".$id.".pdf";
+		 $filename=IPATH_ROOT.DS."cache/invoice/invoice_".$id.".pdf";
+		 $url_file=$Config->site."cache/invoice/invoice_".$id.".pdf";
+         if(!is_dir(IPATH_ROOT.DS.'cache/invoice'))
+		    mkdir(IPATH_ROOT.DS.'cache/invoice');		 
 		if(!file_exists($filename))
 		{
 			$invoice=$this->getInvoiceInDetails($id);

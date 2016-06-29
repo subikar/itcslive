@@ -1,4 +1,4 @@
-<? ob_start("ob_gzhandler"); ?> 
+<?php ob_start("ob_gzhandler"); ?> 
 <?php 
 
     //ini_set('display_error',1); 

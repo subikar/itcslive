@@ -9,7 +9,7 @@ error_reporting(0);
 		function display()
 	   	{
 			global $template; 
-			$template->includejs('templates/itcslive/js/project.js');
+			$template->includejs('admin/templates/itcslive/js/project.js');
 			$this->getProjects();
 			$template->display('header');
 			$template->display('project/project');

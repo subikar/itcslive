@@ -9,7 +9,7 @@
 		  function display()
 		   {
 		        global $template; 
-				$template->includejs('templates/itcslive/js/page.js');
+				$template->includejs('admin/templates/itcslive/js/page.js');
 				
 				$this->getpages();
 				$template->display('header');
@@ -44,7 +44,7 @@
 		 function addnew()	
 		    {
 			    global $template;
-				$template->includejs('templates/itcslive/js/page.js');
+				$template->includejs('admin/templates/itcslive/js/page.js');
 				$PageID=IRequest::getVar("page_id", "");
 				if($PageID!="")
 				{

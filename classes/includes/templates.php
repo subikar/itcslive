@@ -16,9 +16,11 @@ defined ('ITCS') or die ("Go away.");
 		      global $Config;
 		      $this->TemplatePath = $Config->templatepath;
 		   }
-		 function includejs($jspath,$priority = '',$minify=0)
+		 function includejs($jspath,$priority = '',$minify=0,$external=0)
 		   {
+		      global $Config;
 		      $this->priority = ($priority != '' && $this->priority < $priority)?$priority:$this->priority; 
+			  $jspath = ($external == 1)?$jspath:$Config->site.$jspath;
 		      $this->Js[] = array(
 			                      'text'=>'<script src="'.$jspath.'"></script>
 								  ',

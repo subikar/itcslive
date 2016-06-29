@@ -6,8 +6,8 @@
    	{
    		$mainframe->redirect($Config->site);
    	}
-	$template->includecss($Config->site."templates/itcslive/css/invoice.css");
-	$template->includejs($Config->site."templates/itcslive/js/invoice.js");
+	$template->includecss("templates/itcslive/css/invoice.css");
+	$template->includejs("templates/itcslive/js/invoice.js");
 	$task=IRequest::getVar("task");
 	switch($task)
 	{	

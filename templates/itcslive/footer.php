@@ -1,25 +1,13 @@
-<?php  if(isset($this->Content->isfullpage) && $this->Content->isfullpage == 1): ?>
+<?php 
+global $template;
+ if(isset($this->Content->isfullpage) && $this->Content->isfullpage == 1): ?>
 <!-- No Div for Full Page -->
 <?php else: ?>
 </div>
 </section>
 <?php endif; ?>
 <?php  $PageUriInArray=array_values(array_filter(explode( "/",$_SERVER['REQUEST_URI'])));  
-
-
-
-
-
-
-
 $page_id=IRequest::getInt("id"); 
-
-
-
-
-
-
-
 $accessPage_id = array("4","26","33","34","36","37","38","21","22","87"); ?>
 <?php  if($this->is_home || in_array($page_id,$accessPage_id) || ((int)$page_id==5 && in_array("projects",$PageUriInArray))): ?>
 
@@ -95,6 +83,32 @@ $accessPage_id = array("4","26","33","34","36","37","38","21","22","87"); ?>
   </div>
 </footer>
 </div>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.caroufredsel/6.2.1/jquery.carouFredSel.packed.js"></script>
+     <script  src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script> 
+     <script type="text/javascript">
+	 jQuery(window).load (
+			function(){jQuery('#carousel_testimonial').carouFredSel({auto: false, prev: '#prev_testimonial',next: '#next_testimonial', width: 290, items: {
+			  visible : {min: 1,
+			   max: 1
+		},
+		height: 'auto',
+		 width: 290,
+		}, responsive: true, 
+		scroll: 1, 
+		mousewheel: false,
+		swipe: {onMouse: true, onTouch: true}});
+    } ); 
+  </script>
+<!-- For Mobile start -->
+<script src="<?php echo $this->site; ?>templates/itcslive/js/jPushMenu.js"></script>
+<!-- For Mobile End -->
+  
+
+<?php  if(isset($this->Content->isfullpage) && $this->Content->isfullpage == 1): ?>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524982e11e01596a" async="async"></script>
+<?php endif; ?>
+<?php $template->HeadJs(); ?>
 <?php echo $this->Content->jsscript; ?>
 <!-- Google Code for Remarketing Tag -->
 <!--------------------------------------------------

@@ -1,5 +1,5 @@
 ///////// Editor Section //////////////////////
-$(document).ready(function() {
+jQuery(document).ready(function() {
 			tinyMCE.init({
 					// General
 					directionality: "ltr",

@@ -2,8 +2,8 @@
 	global $template,$Config,$my,$mainframe;
 	
 	$task=IRequest::getVar('task');
-	$template->includejs($Config->site."classes/external/editor/editor.js");
-	$template->includejs($Config->site."templates/itcslive/js/ticket.js");
+	$template->includejs("classes/external/editor/editor.js");
+	$template->includejs("templates/itcslive/js/ticket.js");
 	$template->includecss("templates/itcslive/css/ticket.css");
 	switch($task)
 	{

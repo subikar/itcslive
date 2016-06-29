@@ -397,7 +397,7 @@ jQuery(document).ready(function(){
 	jQuery("#text_category").kendoComboBox({filter: "contains"});
 	jQuery(".attachment").colorbox({iframe:true, width:"40%", height:"70%"});
 
-	     var screenwidth = $(document).width();
+	     var screenwidth = jQuery(document).width();
 		 <!--alert(screenwidth);-->
 		 if(screenwidth <= 320)
 		   {

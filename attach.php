@@ -1,8 +1,8 @@
 <?php defined ('ITCS') or die ("Go away.");
 	global $template,$Config,$my,$mainframe;
-	$template->includejs($Config->site."templates/itcslive/js/attach.js");
-	$template->includejs($Config->site."templates/itcslive/js/colorbox/jquery.colorbox.js");
-	$template->includecss($Config->site."templates/itcslive/js/colorbox/colorbox.css");
+	$template->includejs("templates/itcslive/js/attach.js");
+	$template->includejs("templates/itcslive/js/colorbox/jquery.colorbox.js");
+	$template->includecss("templates/itcslive/js/colorbox/colorbox.css");
 	$task=IRequest::getVar('task');
 	switch($task)
 	{

@@ -12,8 +12,8 @@
 	include_once(IPATH_ROOT.DS.'classes'.DS.'common.php');
 	SetSession();
 	$template->TemplatePath = IPATH_BASE.DS.'templates'.DS.'itcslive'.DS;
-    $template->includejs('templates/itcslive/editor/tinymce.min.js');
-    $template->includejs('templates/itcslive/editor/editor.js');
+    $template->includejs('admin/templates/itcslive/editor/tinymce.min.js');
+    $template->includejs('admin/templates/itcslive/editor/editor.js');
 	if($my->uid > 0 && $my->usertype == 'Admin')
 	      $view = IRequest::getString('view','dashboard'); 
 	else

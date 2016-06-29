@@ -1,22 +1,6 @@
 <?php defined ('ITCS') or die ("Go away."); 
 global $Config;
 ?>
-<script src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.carouFredSel-6.1.0-packed.js"></script>
-     <script  src="<?php echo $Config->site; ?>templates/itcslive/js/templatejs/jquery.touchSwipe.min.js"></script> 
-     <script type="text/javascript">
-	 $(window).load (
-			function(){$('#carousel_testimonial').carouFredSel({auto: false, prev: '#prev_testimonial',next: '#next_testimonial', width: 290, items: {
-			  visible : {min: 1,
-			   max: 1
-		},
-		height: 'auto',
-		 width: 290,
-		}, responsive: true, 
-		scroll: 1, 
-		mousewheel: false,
-		swipe: {onMouse: true, onTouch: true}});
-    } ); 
-  </script>
   <h3 class="bot-1 ptm">Testimonials</h3>
   <div class="carousel-box">
         <a id="prev_testimonial"></a>

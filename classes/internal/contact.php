@@ -25,12 +25,12 @@ error_reporting(0);
 		   		global $db,$template,$mainframe,$Config;
 		   		$post=IRequest::get("POST");
 				$session = IRequest::get("SESSION");
-				if($post["formkey"]!=$session[$post['form']])
-					{
-						 $mainframe->redirect($Config->site.'error-thank-you');
-					}
+				//if($post["formkey"]!=$session[$post['form']])
+					//{
+						// $mainframe->redirect($Config->site.'error-thank-you');
+					//}
    			    unset($post["formkey"]);
-				 unset($post["text_num"]);
+				unset($post["text_num"]);
 				unset($post["form"]);
 				unset($post["task"]);
 				unset($post["view"]);

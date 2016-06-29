@@ -9,7 +9,7 @@
 		  function display()
 		   {
 		        global $template; 
-				$template->includejs('templates/itcslive/js/user.js');
+				$template->includejs('admin/templates/itcslive/js/user.js');
 				$this->getusers();
 				$template->display('header');
 				$template->display('users/users');
@@ -44,7 +44,7 @@
 		 function addnew()	
 		    {
 			    global $template;
-				$template->includejs('templates/itcslive/js/user.js');
+				$template->includejs('admin/templates/itcslive/js/user.js');
 				$template->display('header');
 				$uid=IRequest::getInt("uid");
 				if($uid > 0)

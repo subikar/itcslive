@@ -1,8 +1,8 @@
 <?php defined ('ITCS') or die ("Go away.");?>
 <link rel="stylesheet" href="<?php echo $this->site; ?>templates/itcslive/css/camera.css">
-<script src="<?php echo $this->site; ?>templates/itcslive/js/camera.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Camera/1.3.4/scripts/camera.min.js"></script>
 <script type="text/javascript">
- $(document).ready(function(){
+ jQuery(document).ready(function(){
 		   jQuery('#camera_wrap').camera({
 			loader: false,
 			pagination: false,
@@ -12,7 +12,7 @@
 			navigation: true,
 			fx: 'mosaic'
 		  }); 
-        $().UItoTop({ easingType: 'easeOutQuart' });
+        jQuery().UItoTop({ easingType: 'easeOutQuart' });
 });		
 </script>
 <div class="container_12">
